@@ -25,9 +25,9 @@ cookTime: "40 min"
 ## Directions
 
 1. Four à 450°F.
-2. Étendre le beurre sur la carré.
+2. Étendre le beurre sur le carré.
 3. Saler, poivrer et étendre les herbes hachées.
 4. Déposer le carré dans un plat de 12x8.
-5. Ajouter bouillon, vin et échalotte, saler et poivrer.
+5. Ajouter bouillon, vin et échalote, saler et poivrer.
 6. Cuire 15 min, baisser la température 350°F et cuire 25 min.
 7. Couvrir d'aluminium et reposer 15 min.

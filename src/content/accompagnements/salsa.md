@@ -18,7 +18,7 @@ cookTime: "1 heure"
 - 2 tasses de vinaigre
 - ¼ tasse sucre
 - Thym séché
-- Piment broyés
+- Piments broyés
 
 ## Directions
 

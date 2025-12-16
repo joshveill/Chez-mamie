@@ -8,7 +8,7 @@ pubDate: 2025-12-16
 ## Ingrédients
 
 - 1 gâteau Duncan Hines doré
-- 1 boîte d'ananas broyés égouttées
+- 1 boîte d'ananas broyés égouttés
 - 1 paquet 8 oz fromage Philadelphia
 - 1 paquet pouding vanille (non préparé)
 - 1 tasse de lait

@@ -1,5 +1,5 @@
 ---
-title: "Poivrons Farci"
+title: "Poivrons Farcis"
 titleEnglish: "Stuffed Peppers"
 description: "Poivrons farcis aux trois viandes, riz et tomates gratinés"
 pubDate: 2025-12-16

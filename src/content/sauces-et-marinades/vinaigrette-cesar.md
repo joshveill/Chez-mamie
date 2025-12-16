@@ -18,5 +18,5 @@ pubDate: 2025-12-16
 
 ## Directions
 
-1. Battre les blanc d'oeufs en neige. Ajouter le jaune et ajouter l'huile lentement.
+1. Battre les blancs d'oeufs en neige. Ajouter le jaune et ajouter l'huile lentement.
 2. Ajouter le reste des ingrédients, mettre le vinaigre à la fin.

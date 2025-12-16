@@ -13,7 +13,7 @@ cookTime: "2h30"
 - 3 pommes
 - ⅓ d'un pied de céleri
 - 1 boîte de pêches 398ml ou 3 pêches
-- 2 oignons moyen
+- 2 oignons moyens
 - 1⅓ tasse sucre
 - 1⅓ tasse vinaigre
 - 1 c. à soupe gros sel

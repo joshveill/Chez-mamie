@@ -1,5 +1,5 @@
 ---
-title: "Sauces Trempettes pour Fondu"
+title: "Sauces Trempettes pour Fondue"
 titleEnglish: "Fondue Dipping Sauces"
 description: "Trois sauces d'accompagnement pour fondue: chili, rose et relish"
 pubDate: 2025-12-16
@@ -21,4 +21,4 @@ prepTime: "15 min"
 
 - ⅔ tasse de mayonnaise
 - ⅓ tasse relish
-- 1 pincé poudre d'ail
+- 1 pincée poudre d'ail

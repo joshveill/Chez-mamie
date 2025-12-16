@@ -12,7 +12,7 @@ cookTime: "15 min"
 - 2 tasses de farine
 - 2 c. à thé de poudre à pâte
 - 3 oeufs
-- Pincé de sel
+- Pincée de sel
 
 ## Directions
 

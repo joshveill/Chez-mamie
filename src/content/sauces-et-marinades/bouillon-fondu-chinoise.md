@@ -1,5 +1,5 @@
 ---
-title: "Bouillon Fondu Chinoises"
+title: "Bouillon Fondue Chinoise"
 titleEnglish: "Chinese Fondue Broth"
 description: "Bouillon savoureux au boeuf et poulet pour fondue chinoise"
 pubDate: 2025-12-16

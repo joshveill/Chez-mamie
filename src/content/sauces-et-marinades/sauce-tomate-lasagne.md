@@ -13,7 +13,7 @@ cookTime: "1-2 heures"
 - 1 boîte 6 oz de pâtes de tomates
 - 1 feuille laurier
 - 1 gousse d'ail
-- ¾ tasse d'oignons haché
+- ¾ tasse d'oignons hachés
 - 2 c. à soupe d'huile
 - 1½ c. à thé sucre
 - ½ c. à thé sel

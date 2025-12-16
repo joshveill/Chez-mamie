@@ -1,5 +1,5 @@
 ---
-title: "Boulettes Chinois"
+title: "Boulettes Chinoises"
 titleEnglish: "Chinese Meatballs"
 description: "Boulettes de steak haché en sauce aigre-douce à l'ananas"
 pubDate: 2025-12-16

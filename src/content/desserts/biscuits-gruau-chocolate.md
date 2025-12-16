@@ -21,6 +21,6 @@ cookTime: "10 min"
 
 1. Mélanger les 3 premiers ingrédients ensemble.
 2. Faire fondre le beurre, lait et cassonade ensemble 5 min, sans bouillir.
-3. Verser sur les ingrédients sec.
+3. Verser sur les ingrédients secs.
 4. Placer sur un papier ciré.
 5. Refroidir à température de la pièce. Recouvrir d'un linge ou papier ciré.

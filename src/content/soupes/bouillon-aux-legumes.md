@@ -10,8 +10,8 @@ cookTime: "10 min"
 ## Ingrédients
 
 - 2 c. à soupe beurre
-- 2 branches de céleri émincé
-- ½ lb champignons émincé
+- 2 branches de céleri émincées
+- ½ lb champignons émincés
 - 1 oignon rouge haché fin
 - 1 c. à soupe de persil haché
 - 1 feuille de laurier

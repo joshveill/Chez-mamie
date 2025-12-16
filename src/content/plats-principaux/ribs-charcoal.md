@@ -18,5 +18,5 @@ pubDate: 2025-12-16
 ## Directions
 
 1. Bouillir les côtes levées 45 min avec oignon et base de poulet.
-2. Mariner la viande refroidi (min 1h30).
+2. Mariner la viande refroidie (min 1h30).
 3. Cuisson à medium.

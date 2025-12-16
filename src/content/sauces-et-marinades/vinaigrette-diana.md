@@ -10,6 +10,6 @@ pubDate: 2025-12-16
 - ¼ tasse sauce Diana à l'érable
 - 2 c. à soupe vinaigre de vin rouge
 - 1 c. à soupe d'huile d'olive
-- Tomates cerises coupés en 3
+- Tomates cerises coupées en 3
 - Fromage de chèvre
 - Pêches en quartier grillées

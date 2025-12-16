@@ -17,7 +17,7 @@ prepTime: "10 min"
 
 1. Graisser le haut du plat de cuisson avec du beurre.
 2. Mélanger les ingrédients et cuire au micro-ondes 9 min.
-3. Déposer le plat dans de l'eau glacé et ajouter ½ c. à thé d'essence d'érable.
+3. Déposer le plat dans de l'eau glacée et ajouter ½ c. à thé d'essence d'érable.
 4. Fouetter 3 min au maximum afin d'obtenir une couleur pâle.
 
 **Peanuts au goût**

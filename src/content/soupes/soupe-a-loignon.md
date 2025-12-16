@@ -22,6 +22,6 @@ prepTime: "15 min"
 
 ## Directions
 
-1. Faire revenir les oignons dans le beurre jusqu'à qu'il soit transparent.
+1. Faire revenir les oignons dans le beurre jusqu'à ce qu'ils soient transparents.
 2. Ajouter de la farine ensuite le vin en brassant, ajouter au bouillon déjà chaud.
-3. Pour croûtons: 2 toasts coupé en cubes.
+3. Pour croûtons: 2 toasts coupés en cubes.
