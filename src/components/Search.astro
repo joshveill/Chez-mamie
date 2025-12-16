@@ -1,0 +1,346 @@
+---
+---
+
+<div class="search-container">
+	<div class="search-input-wrapper">
+		<svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<circle cx="11" cy="11" r="8"></circle>
+			<path d="m21 21-4.3-4.3"></path>
+		</svg>
+		<input
+			type="text"
+			id="search-input"
+			placeholder="Rechercher une recette ou ingrédient..."
+			autocomplete="off"
+		/>
+		<button id="search-clear" class="search-clear" aria-label="Effacer">×</button>
+	</div>
+	<div id="search-results" class="search-results"></div>
+</div>
+
+<style>
+	.search-container {
+		position: relative;
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	.search-input-wrapper {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	.search-icon {
+		position: absolute;
+		left: 14px;
+		color: var(--text-muted);
+		pointer-events: none;
+	}
+
+	#search-input {
+		width: 100%;
+		padding: 0.85rem 2.5rem 0.85rem 2.75rem;
+		font-size: 1rem;
+		font-family: inherit;
+		border: 1px solid var(--border);
+		border-radius: 6px;
+		background: white;
+		color: var(--text);
+		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	#search-input:focus {
+		outline: none;
+		border-color: var(--accent-light);
+		box-shadow: 0 0 0 3px rgba(180, 90, 60, 0.1);
+	}
+
+	#search-input::placeholder {
+		color: var(--text-muted);
+		font-style: italic;
+	}
+
+	.search-clear {
+		position: absolute;
+		right: 10px;
+		background: none;
+		border: none;
+		font-size: 1.4rem;
+		color: var(--text-muted);
+		cursor: pointer;
+		padding: 0 8px;
+		display: none;
+		line-height: 1;
+	}
+
+	.search-clear:hover {
+		color: var(--text);
+	}
+
+	.search-clear.visible {
+		display: block;
+	}
+
+	.search-results {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: white;
+		border-radius: 6px;
+		box-shadow: var(--box-shadow-hover);
+		border: 1px solid var(--border);
+		max-height: 400px;
+		overflow-y: auto;
+		z-index: 1000;
+		display: none;
+		margin-top: 6px;
+	}
+
+	.search-results.visible {
+		display: block;
+	}
+
+	.search-results::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	.search-results::-webkit-scrollbar-track {
+		background: var(--background-alt);
+		border-radius: 4px;
+	}
+
+	.search-results::-webkit-scrollbar-thumb {
+		background: var(--border);
+		border-radius: 4px;
+	}
+</style>
+
+<script>
+	let recipes = [];
+	let selectedIndex = -1;
+
+	async function loadRecipes() {
+		try {
+			const response = await fetch('/api/search.json');
+			recipes = await response.json();
+		} catch (error) {
+			console.error('Error loading recipes:', error);
+		}
+	}
+
+	function normalizeText(text) {
+		return text
+			.toLowerCase()
+			.normalize('NFD')
+			.replace(/[\u0300-\u036f]/g, '');
+	}
+
+	function searchRecipes(query) {
+		if (!query || query.length < 2) return [];
+
+		const normalizedQuery = normalizeText(query);
+		const terms = normalizedQuery.split(/\s+/).filter(t => t.length > 1);
+
+		const results = recipes
+			.map(recipe => {
+				let score = 0;
+				const titleNorm = normalizeText(recipe.title);
+				const titleEnNorm = normalizeText(recipe.titleEnglish);
+				const descNorm = normalizeText(recipe.description);
+				const contentNorm = normalizeText(recipe.content);
+
+				for (const term of terms) {
+					if (titleNorm.includes(term)) score += 10;
+					if (titleEnNorm.includes(term)) score += 8;
+					if (descNorm.includes(term)) score += 5;
+					if (contentNorm.includes(term)) score += 3;
+				}
+
+				if (titleNorm.includes(normalizedQuery)) score += 15;
+
+				return { ...recipe, score };
+			})
+			.filter(r => r.score > 0)
+			.sort((a, b) => b.score - a.score)
+			.slice(0, 10);
+
+		return results;
+	}
+
+	function highlightMatch(text, query) {
+		if (!query) return text;
+		const normalizedQuery = normalizeText(query);
+		const terms = normalizedQuery.split(/\s+/).filter(t => t.length > 1);
+
+		let result = text;
+		for (const term of terms) {
+			const regex = new RegExp(`(${term})`, 'gi');
+			result = result.replace(regex, '<mark>$1</mark>');
+		}
+		return result;
+	}
+
+	function renderResults(results, query) {
+		const container = document.getElementById('search-results');
+		if (!container) return;
+
+		if (results.length === 0) {
+			container.innerHTML = `
+				<div style="padding: 1.25rem; text-align: center; color: var(--text-muted); font-style: italic;">
+					Aucune recette trouvée pour « ${query} »
+				</div>
+			`;
+			container.classList.add('visible');
+			return;
+		}
+
+		container.innerHTML = results
+			.map((recipe, index) => `
+				<a href="${recipe.url}" class="search-result-item ${index === selectedIndex ? 'selected' : ''}" data-index="${index}">
+					<div class="result-title">${highlightMatch(recipe.title, query)}</div>
+					<div class="result-meta">
+						<span class="result-category">${recipe.category}</span>
+						${recipe.prepTime ? `<span class="result-time">· ${recipe.prepTime}</span>` : ''}
+					</div>
+				</a>
+			`)
+			.join('');
+
+		container.classList.add('visible');
+	}
+
+	function hideResults() {
+		const container = document.getElementById('search-results');
+		if (container) {
+			container.classList.remove('visible');
+			selectedIndex = -1;
+		}
+	}
+
+	function updateSelection(results) {
+		const items = document.querySelectorAll('.search-result-item');
+		items.forEach((item, index) => {
+			item.classList.toggle('selected', index === selectedIndex);
+		});
+
+		const selected = document.querySelector('.search-result-item.selected');
+		if (selected) {
+			selected.scrollIntoView({ block: 'nearest' });
+		}
+	}
+
+	function init() {
+		const input = document.getElementById('search-input');
+		const clearBtn = document.getElementById('search-clear');
+		const resultsContainer = document.getElementById('search-results');
+
+		if (!input) return;
+
+		loadRecipes();
+
+		let debounceTimer;
+		input.addEventListener('input', (e) => {
+			const query = e.target.value.trim();
+
+			clearBtn?.classList.toggle('visible', query.length > 0);
+
+			clearTimeout(debounceTimer);
+			debounceTimer = setTimeout(() => {
+				if (query.length >= 2) {
+					const results = searchRecipes(query);
+					selectedIndex = -1;
+					renderResults(results, query);
+				} else {
+					hideResults();
+				}
+			}, 150);
+		});
+
+		input.addEventListener('keydown', (e) => {
+			const results = document.querySelectorAll('.search-result-item');
+			if (results.length === 0) return;
+
+			if (e.key === 'ArrowDown') {
+				e.preventDefault();
+				selectedIndex = Math.min(selectedIndex + 1, results.length - 1);
+				updateSelection(results);
+			} else if (e.key === 'ArrowUp') {
+				e.preventDefault();
+				selectedIndex = Math.max(selectedIndex - 1, -1);
+				updateSelection(results);
+			} else if (e.key === 'Enter' && selectedIndex >= 0) {
+				e.preventDefault();
+				const selected = results[selectedIndex];
+				if (selected) {
+					window.location.href = selected.getAttribute('href');
+				}
+			} else if (e.key === 'Escape') {
+				hideResults();
+				input.blur();
+			}
+		});
+
+		clearBtn?.addEventListener('click', () => {
+			input.value = '';
+			clearBtn.classList.remove('visible');
+			hideResults();
+			input.focus();
+		});
+
+		document.addEventListener('click', (e) => {
+			if (!e.target.closest('.search-container')) {
+				hideResults();
+			}
+		});
+
+		const style = document.createElement('style');
+		style.textContent = `
+			.search-result-item {
+				display: block;
+				padding: 0.9rem 1.25rem;
+				text-decoration: none;
+				border-bottom: 1px solid var(--border);
+				transition: background-color 0.15s ease;
+			}
+			.search-result-item:last-child {
+				border-bottom: none;
+			}
+			.search-result-item:hover,
+			.search-result-item.selected {
+				background-color: var(--background-alt);
+			}
+			.result-title {
+				font-family: 'Playfair Display', Georgia, serif;
+				font-weight: 600;
+				color: var(--text);
+				margin-bottom: 0.25rem;
+				font-size: 1.05rem;
+			}
+			.result-title mark {
+				background-color: rgba(180, 90, 60, 0.15);
+				color: inherit;
+				padding: 1px 3px;
+				border-radius: 2px;
+			}
+			.result-meta {
+				font-size: 0.85rem;
+				color: var(--text-muted);
+				display: flex;
+				gap: 0.5rem;
+			}
+			.result-category {
+				color: var(--accent);
+			}
+		`;
+		document.head.appendChild(style);
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', init);
+	} else {
+		init();
+	}
+</script>

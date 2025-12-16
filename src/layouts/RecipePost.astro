@@ -1,0 +1,228 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+interface Props {
+	title: string;
+	titleEnglish?: string;
+	description: string;
+	pubDate: Date;
+	updatedDate?: Date;
+	prepTime?: string;
+	cookTime?: string;
+	category: string;
+	categorySlug: string;
+}
+
+const { title, titleEnglish, description, prepTime, cookTime, category, categorySlug } = Astro.props;
+---
+
+<html lang="fr">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			.recipe-container {
+				max-width: 720px;
+				margin: 0 auto;
+			}
+
+			.breadcrumb {
+				font-size: 0.9rem;
+				color: var(--text-muted);
+				margin-bottom: 1.5rem;
+				padding-top: 0.5rem;
+			}
+
+			.breadcrumb a {
+				color: var(--text-muted);
+				text-decoration: none;
+			}
+
+			.breadcrumb a:hover {
+				color: var(--accent);
+			}
+
+			.recipe-header {
+				text-align: center;
+				margin-bottom: 2rem;
+				padding-bottom: 2rem;
+				border-bottom: 1px solid var(--border);
+			}
+
+			.recipe-header h1 {
+				margin: 0 0 0.25rem;
+				font-size: 2.2rem;
+			}
+
+			.title-english {
+				color: var(--text-muted);
+				font-size: 1.1rem;
+				font-style: italic;
+				margin: 0 0 1.5rem;
+			}
+
+			.recipe-meta {
+				display: flex;
+				justify-content: center;
+				gap: 2rem;
+				flex-wrap: wrap;
+			}
+
+			.meta-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.25rem;
+			}
+
+			.meta-label {
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				color: var(--text-muted);
+			}
+
+			.meta-value {
+				font-family: 'Playfair Display', Georgia, serif;
+				font-size: 1.1rem;
+				color: var(--text);
+				font-weight: 600;
+			}
+
+			.recipe-content {
+				line-height: 1.8;
+			}
+
+			.recipe-content :global(h2) {
+				font-size: 1.4rem;
+				margin: 2.5rem 0 1rem;
+				color: var(--text);
+				padding-bottom: 0.5rem;
+				border-bottom: 1px solid var(--border);
+			}
+
+			.recipe-content :global(h2:first-child) {
+				margin-top: 0;
+			}
+
+			.recipe-content :global(h3) {
+				font-size: 1.15rem;
+				margin: 1.75rem 0 0.75rem;
+				color: var(--text);
+			}
+
+			.recipe-content :global(ul) {
+				padding-left: 1.25rem;
+				margin: 1rem 0;
+			}
+
+			.recipe-content :global(ul li) {
+				margin-bottom: 0.5rem;
+				position: relative;
+			}
+
+			.recipe-content :global(ul li::marker) {
+				color: var(--accent);
+			}
+
+			.recipe-content :global(ol) {
+				padding-left: 1.25rem;
+				margin: 1rem 0;
+			}
+
+			.recipe-content :global(ol li) {
+				margin-bottom: 1rem;
+				padding-left: 0.5rem;
+			}
+
+			.recipe-content :global(ol li::marker) {
+				color: var(--accent);
+				font-weight: 600;
+			}
+
+			.recipe-content :global(p) {
+				margin: 1rem 0;
+			}
+
+			.recipe-content :global(strong) {
+				color: var(--text);
+			}
+
+			.back-link {
+				display: inline-block;
+				margin-top: 3rem;
+				padding: 0.75rem 1.5rem;
+				background: var(--background-alt);
+				color: var(--text);
+				text-decoration: none;
+				border-radius: 4px;
+				font-size: 0.95rem;
+				transition: background-color 0.2s ease;
+			}
+
+			.back-link:hover {
+				background: var(--border);
+				color: var(--text);
+			}
+
+			@media (max-width: 720px) {
+				.recipe-header h1 {
+					font-size: 1.8rem;
+				}
+
+				.title-english {
+					font-size: 1rem;
+				}
+
+				.recipe-meta {
+					gap: 1.5rem;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article class="recipe-container">
+				<nav class="breadcrumb">
+					<a href="/">Accueil</a> ›
+					<a href={`/recettes/${categorySlug}/`}>{category}</a> ›
+					<span>{title}</span>
+				</nav>
+
+				<header class="recipe-header">
+					<h1>{title}</h1>
+					{titleEnglish && <p class="title-english">{titleEnglish}</p>}
+
+					{(prepTime || cookTime) && (
+						<div class="recipe-meta">
+							{prepTime && (
+								<div class="meta-item">
+									<span class="meta-label">Préparation</span>
+									<span class="meta-value">{prepTime}</span>
+								</div>
+							)}
+							{cookTime && (
+								<div class="meta-item">
+									<span class="meta-label">Cuisson</span>
+									<span class="meta-value">{cookTime}</span>
+								</div>
+							)}
+						</div>
+					)}
+				</header>
+
+				<div class="recipe-content">
+					<slot />
+				</div>
+
+				<a href={`/recettes/${categorySlug}/`} class="back-link">
+					← Retour aux {category.toLowerCase()}
+				</a>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

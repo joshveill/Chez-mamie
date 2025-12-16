@@ -1,0 +1,46 @@
+---
+import { getCollection, render } from 'astro:content';
+import RecipePost from '../../../layouts/RecipePost.astro';
+
+const categoryInfo: Record<string, { name: string }> = {
+	'plats-principaux': { name: 'Plats Principaux' },
+	'desserts': { name: 'Desserts' },
+	'sauces-et-marinades': { name: 'Sauces et Marinades' },
+	'accompagnements': { name: 'Accompagnements' },
+	'soupes': { name: 'Soupes' }
+};
+
+export async function getStaticPaths() {
+	const categories = ['plats-principaux', 'desserts', 'sauces-et-marinades', 'accompagnements', 'soupes'];
+	const paths = [];
+
+	for (const category of categories) {
+		const recipes = await getCollection(category as any);
+		for (const recipe of recipes) {
+			paths.push({
+				params: { category, slug: recipe.id },
+				props: { recipe, category },
+			});
+		}
+	}
+
+	return paths;
+}
+
+const { recipe, category } = Astro.props;
+const { Content } = await render(recipe);
+const info = categoryInfo[category];
+---
+
+<RecipePost
+	title={recipe.data.title}
+	titleEnglish={recipe.data.titleEnglish}
+	description={recipe.data.description}
+	pubDate={recipe.data.pubDate}
+	prepTime={recipe.data.prepTime}
+	cookTime={recipe.data.cookTime}
+	category={info.name}
+	categorySlug={category}
+>
+	<Content />
+</RecipePost>

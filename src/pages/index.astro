@@ -2,47 +2,256 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import Search from '../components/Search.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const categories = [
+	{
+		name: 'Plats Principaux',
+		slug: 'plats-principaux',
+		description: 'Poulet, porc, boeuf et fruits de mer',
+		count: 23
+	},
+	{
+		name: 'Desserts',
+		slug: 'desserts',
+		description: 'Gâteaux, biscuits et sucreries',
+		count: 17
+	},
+	{
+		name: 'Sauces et Marinades',
+		slug: 'sauces-et-marinades',
+		description: 'Vinaigrettes, trempettes et marinades',
+		count: 16
+	},
+	{
+		name: 'Accompagnements',
+		slug: 'accompagnements',
+		description: 'Conserves et condiments maison',
+		count: 4
+	},
+	{
+		name: 'Soupes',
+		slug: 'soupes',
+		description: 'Potages et bouillons réconfortants',
+		count: 3
+	}
+];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.hero {
+				text-align: center;
+				padding: 3rem 1rem 2rem;
+			}
+
+			.hero h1 {
+				font-size: 2.8rem;
+				margin-bottom: 0.5rem;
+				font-weight: 700;
+			}
+
+			.hero-subtitle {
+				font-style: italic;
+				color: var(--text-muted);
+				font-size: 1.2rem;
+				margin: 0;
+			}
+
+			.divider {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				margin: 2rem auto;
+				max-width: 300px;
+				color: var(--text-muted);
+			}
+
+			.divider::before,
+			.divider::after {
+				content: '';
+				flex: 1;
+				height: 1px;
+				background: var(--border);
+			}
+
+			.divider-icon {
+				font-size: 1.2rem;
+				color: var(--accent);
+			}
+
+			.search-wrapper {
+				margin: 0 auto 2rem;
+				max-width: 500px;
+			}
+
+			.intro {
+				text-align: center;
+				max-width: 550px;
+				margin: 0 auto 3rem;
+				color: var(--text-muted);
+				font-style: italic;
+				line-height: 1.8;
+			}
+
+			.categories-title {
+				text-align: center;
+				font-size: 1.1rem;
+				text-transform: uppercase;
+				letter-spacing: 0.15em;
+				color: var(--text-muted);
+				margin-bottom: 1.5rem;
+				font-family: 'Source Serif 4', Georgia, serif;
+				font-weight: 600;
+			}
+
+			.categories {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 1.25rem;
+				padding: 0;
+				list-style: none;
+				margin: 0;
+			}
+
+			.category-card {
+				background: white;
+				border-radius: 6px;
+				padding: 1.75rem;
+				box-shadow: var(--box-shadow);
+				border: 1px solid rgba(230, 222, 210, 0.8);
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+				text-decoration: none;
+				display: block;
+				position: relative;
+			}
+
+			.category-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 3px;
+				background: var(--accent);
+				border-radius: 6px 6px 0 0;
+				opacity: 0;
+				transition: opacity 0.2s ease;
+			}
+
+			.category-card:hover {
+				transform: translateY(-3px);
+				box-shadow: var(--box-shadow-hover);
+			}
+
+			.category-card:hover::before {
+				opacity: 1;
+			}
+
+			.category-card h2 {
+				margin: 0 0 0.5rem;
+				font-size: 1.4rem;
+				color: var(--text);
+			}
+
+			.category-card p {
+				margin: 0 0 1rem;
+				color: var(--text-muted);
+				font-size: 0.95rem;
+				line-height: 1.5;
+			}
+
+			.recipe-count {
+				font-size: 0.85rem;
+				color: var(--accent);
+				font-weight: 600;
+				display: inline-block;
+				padding: 0.25rem 0.75rem;
+				background: rgba(180, 90, 60, 0.08);
+				border-radius: 20px;
+			}
+
+			.bottom-flourish {
+				text-align: center;
+				margin-top: 4rem;
+				color: var(--text-muted);
+				font-style: italic;
+			}
+
+			.flourish-line {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 1rem;
+				margin-top: 1rem;
+			}
+
+			.flourish-line::before,
+			.flourish-line::after {
+				content: '';
+				width: 60px;
+				height: 1px;
+				background: var(--border);
+			}
+
+			@media (max-width: 720px) {
+				.hero h1 {
+					font-size: 2.2rem;
+				}
+				.hero-subtitle {
+					font-size: 1.1rem;
+				}
+				.categories {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
+			<section class="hero">
+				<h1>Les Recettes de Grand-mère</h1>
+				<p class="hero-subtitle">Une collection de recettes familiales</p>
+			</section>
+
+			<div class="divider">
+				<span class="divider-icon">✦</span>
+			</div>
+
+			<div class="search-wrapper">
+				<Search />
+			</div>
+
+			<p class="intro">
+				Soixante-trois recettes transcrites avec soin des fiches manuscrites de grand-mère Lorraine,
+				préservées pour les générations futures.
 			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+
+			<p class="categories-title">Parcourir les recettes</p>
+
+			<ul class="categories">
+				{categories.map((cat) => (
+					<li>
+						<a href={`/recettes/${cat.slug}/`} class="category-card">
+							<h2>{cat.name}</h2>
+							<p>{cat.description}</p>
+							<span class="recipe-count">{cat.count} recettes</span>
+						</a>
+					</li>
+				))}
 			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+
+			<div class="bottom-flourish">
+				<p>Transmises avec amour de génération en génération</p>
+				<div class="flourish-line">
+					<span>❧</span>
+				</div>
+			</div>
 		</main>
 		<Footer />
 	</body>
