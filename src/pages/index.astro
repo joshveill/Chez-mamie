@@ -4,6 +4,8 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Search from '../components/Search.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { Image } from 'astro:assets';
+import mamieHero from '../assets/mamie.jpg';
 
 const categories = [
 	{
@@ -60,6 +62,17 @@ const categories = [
 				color: var(--text-muted);
 				font-size: 1.2rem;
 				margin: 0;
+			}
+
+			.hero-portrait {
+				margin-top: 1.75rem;
+			}
+
+			.hero-portrait img {
+				border-radius: 50%;
+				border: 3px solid var(--accent);
+				box-shadow: 0 4px 15px rgba(90, 70, 55, 0.15);
+				object-fit: cover;
 			}
 
 			.divider {
@@ -217,6 +230,9 @@ const categories = [
 			<section class="hero">
 				<h1>Les Recettes de Grand-mère</h1>
 				<p class="hero-subtitle">Une collection de recettes familiales</p>
+				<div class="hero-portrait">
+					<Image src={mamieHero} alt="Mamie" width={140} height={140} />
+				</div>
 			</section>
 
 			<div class="divider">
