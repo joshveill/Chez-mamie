@@ -14,7 +14,7 @@ pubDate: 2025-12-16
 - ½ tasse d'huile végétale
 - 1½ c. à thé sel d'ail
 
-## Directions
+## Préparation
 
 1. Mélangez tous ces ingrédients et laissez la viande mariner pendant 2 heures à 350°F.
 2. Marinez les légumes et mettre au four avec le poulet.

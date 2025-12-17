@@ -19,7 +19,7 @@ cookTime: "2h30"
 - 1 c. à soupe gros sel
 - ¼ tasse d'épices à marinade dans du coton à fromage
 
-## Directions
+## Préparation
 
 1. Cuire 2h30 sur la cuisinière med/low.
 

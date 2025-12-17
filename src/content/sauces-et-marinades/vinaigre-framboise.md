@@ -10,7 +10,7 @@ pubDate: 2025-12-16
 - 10 oz vinaigre de vin blanc
 - 9 oz (270g) framboises
 
-## Directions
+## Préparation
 
 1. Pendant 4 jours.
 2. Jeter les framboises, rajouter 9 oz de framboises.

@@ -17,7 +17,7 @@ cookTime: "10 min"
 - 5 Crunchie
 - 2 tasses de crème 35%
 
-## Directions
+## Préparation
 
 1. Battre blanc d'oeuf en neige avec la crème de tarte.
 2. Ajouter sucre et sel.

@@ -15,7 +15,7 @@ cookTime: "30 min"
 - Tomates étuvées
 - Riz Uncle Ben
 
-## Directions
+## Préparation
 
 1. Ébouillanter les poivrons 1 min.
 2. Cuire les viandes avec les oignons.

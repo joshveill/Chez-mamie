@@ -13,7 +13,7 @@ pubDate: 2025-12-16
 - 1 paquet pouding vanille (non préparé)
 - 1 tasse de lait
 
-## Directions
+## Préparation
 
 1. Préparer le gâteau tel que sur la boîte mais remplacer l'eau par le jus d'ananas et compléter avec l'eau.
 2. Cuire gâteau sur plat Pyrex 13 x 9.

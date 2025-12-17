@@ -30,7 +30,7 @@ cookTime: "3 heures"
 - 2 c. à table d'huile Mazola
 - 1 boîte de champignons
 
-## Directions
+## Préparation
 
 1. Mélangez le tout sans cuire la viande.
 2. Cuire 3 heures très lentement.

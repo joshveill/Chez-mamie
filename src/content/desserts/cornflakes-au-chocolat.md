@@ -14,7 +14,7 @@ prepTime: "5 min"
 - 1 sac de chocolate chips
 - 5 tasses de cornflakes
 
-## Directions
+## Préparation
 
 1. Faire fondre les 4 premiers ingrédients et ajouter les cornflakes émiettées.
 2. Laisser durcir.

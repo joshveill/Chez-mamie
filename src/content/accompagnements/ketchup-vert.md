@@ -18,7 +18,7 @@ cookTime: "2-3 heures"
 - 1 c. à thé muscade
 - 1 c. à table d'épice marinade (coton fromage)
 
-## Directions
+## Préparation
 
 1. Cuire 2 hrs sur la cuisinière med/low.
 

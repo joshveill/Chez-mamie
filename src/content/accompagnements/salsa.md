@@ -20,7 +20,7 @@ cookTime: "1 heure"
 - Thym séché
 - Piments broyés
 
-## Directions
+## Préparation
 
 1. Cuire 1 heure.
 

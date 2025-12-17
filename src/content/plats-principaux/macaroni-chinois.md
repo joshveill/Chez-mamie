@@ -26,7 +26,7 @@ cookTime: "10 min"
 - 2 c. à table d'eau
 - ½ c. à thé M.S.G. (optionnel)
 
-## Directions
+## Préparation
 
 1. Wok à 375°F.
 2. Sauter le steak dans l'huile avec l'ail pendant 3 min.

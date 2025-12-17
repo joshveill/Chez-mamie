@@ -16,7 +16,7 @@ cookTime: "45 min"
 - ½ boîte de lait
 - Sel et poivre au goût
 
-## Directions
+## Préparation
 
 1. Mélanger le tout et déposer dans des croûtes à tarte. Fait 3 pâtés.
 2. Cuire 5 min à 425°F, puis 15-20 min à 350°F.

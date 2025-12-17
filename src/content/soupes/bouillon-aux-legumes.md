@@ -17,7 +17,7 @@ cookTime: "10 min"
 - 1 feuille de laurier
 - 6 tasses de bouillon de poulet chaud
 
-## Directions
+## Préparation
 
 1. À feu moyen, cuire 6 minutes céleri, champignons, et oignons dans le beurre. Couvrir.
 2. Enlever le couvercle et ajouter le reste des ingrédients.

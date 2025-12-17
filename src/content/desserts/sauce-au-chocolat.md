@@ -13,7 +13,7 @@ prepTime: "15 min"
 - ¼ tasse beurre
 - 1 c. à table de rhum
 
-## Directions
+## Préparation
 
 1. Faire chauffer et mettre de la vanille à la fin.
 

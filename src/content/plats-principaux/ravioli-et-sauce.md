@@ -28,11 +28,11 @@ pubDate: 2025-12-16
 - ½ c. à thé épice italienne
 - ½ c. à thé fines herbes
 
-## Directions (Farce)
+## Préparation (Farce)
 
 1. Quand tout est cuit, laisser refroidir.
 2. Ajoute l'oeuf seulement quand c'est froid.
 
-## Directions (Sauce)
+## Préparation (Sauce)
 
 1. Cuire 10 minutes. Quand la sauce est cuite, mettre les ravioli.

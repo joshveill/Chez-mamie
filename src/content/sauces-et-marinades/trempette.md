@@ -18,6 +18,6 @@ prepTime: "10 min"
 - 2 c. à soupe relish
 - 1 c. à soupe moutarde
 
-## Directions
+## Préparation
 
 1. Passez au blender.

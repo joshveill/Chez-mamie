@@ -16,7 +16,7 @@ pubDate: 2025-12-16
 - 2 c. à thé sel
 - ¼ tasse sucre
 
-## Directions
+## Préparation
 
 1. Battre les blancs d'oeufs en neige. Ajouter le jaune et ajouter l'huile lentement.
 2. Ajouter le reste des ingrédients, mettre le vinaigre à la fin.

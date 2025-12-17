@@ -20,7 +20,7 @@ prepTime: "15 min"
 - Sel et poivre
 - Tabasco optionnel
 
-## Directions
+## Préparation
 
 1. Faire revenir les oignons dans le beurre jusqu'à ce qu'ils soient transparents.
 2. Ajouter de la farine ensuite le vin en brassant, ajouter au bouillon déjà chaud.

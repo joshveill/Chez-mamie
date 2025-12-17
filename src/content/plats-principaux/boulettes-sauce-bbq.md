@@ -16,7 +16,7 @@ prepTime: "20 min"
 - 2 c. à table de crème ou lait
 - Sel et poivre
 
-## Directions
+## Préparation
 
 1. Battre 1 oeuf et la crème ensemble.
 2. Mélanger tous les ingrédients ensemble et faire des boulettes.

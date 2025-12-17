@@ -16,7 +16,7 @@ cookTime: "35 min"
 - ½ tasse d'eau
 - 2 c. à table cassonade
 
-## Directions
+## Préparation
 
 1. Défaire le beurre, ajouter la farine, la cassonade et le reste des ingrédients.
 2. Battre à la fourchette ou au malaxeur.

@@ -5,38 +5,65 @@ import Header from '../components/Header.astro';
 import Search from '../components/Search.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { Image } from 'astro:assets';
-import mamieHero from '../assets/mamie.png';
+import mamieHero from '../assets/mamie-hero.jpg';
+
+// Dish type images
+import imgPlats from '../assets/dish-type-images/Plats.jpg';
+import imgDesserts from '../assets/dish-type-images/Dessert.jpg';
+import imgSauces from '../assets/dish-type-images/Sauces.jpg';
+import imgAccompagnements from '../assets/dish-type-images/Accompagnement.jpg';
+import imgSoupes from '../assets/dish-type-images/Soupes.jpg';
+
+// Client photos
+import client1 from '../assets/Clients-Satisfait/465620198_10235304235171697_3384813957650817972_n.jpg';
+import client2 from '../assets/Clients-Satisfait/49115849_1982997131769704_2325866481755095040_n.jpg';
+import client3 from '../assets/Clients-Satisfait/492159244_9518339308235411_8161312721155323207_n.jpg';
+import client4 from '../assets/Clients-Satisfait/492223269_9518339321568743_3394844088825551102_n.jpg';
+import client5 from '../assets/Clients-Satisfait/492487342_9518339074902101_4011156526496330586_n.jpg';
+import client6 from '../assets/Clients-Satisfait/494158522_2637858406410193_7246199100952040996_n.jpg';
+import client7 from '../assets/Clients-Satisfait/596479002_25204326102543479_704648415692326250_n.jpg';
+import client8 from '../assets/Clients-Satisfait/596816287_25204325905876832_3672412254375569599_n.jpg';
+import client9 from '../assets/Clients-Satisfait/71935021_2448685231867556_3044609385927016448_n.jpg';
+import client10 from '../assets/Clients-Satisfait/IMG_0027.JPG';
+import client11 from '../assets/Clients-Satisfait/IMG_1907.JPG';
+
+const clientPhotos = [client1, client2, client3, client4, client5, client6, client7, client8, client9, client10, client11];
 
 const categories = [
 	{
 		name: 'Plats Principaux',
 		slug: 'plats-principaux',
 		description: 'Poulet, porc, boeuf et fruits de mer',
-		count: 23
+		count: 23,
+		image: imgPlats
 	},
 	{
 		name: 'Desserts',
 		slug: 'desserts',
 		description: 'Gâteaux, biscuits et sucreries',
-		count: 17
+		count: 17,
+		image: imgDesserts
 	},
 	{
 		name: 'Sauces et Marinades',
 		slug: 'sauces-et-marinades',
 		description: 'Vinaigrettes, trempettes et marinades',
-		count: 16
+		count: 16,
+		image: imgSauces
 	},
 	{
 		name: 'Accompagnements',
 		slug: 'accompagnements',
 		description: 'Conserves et condiments maison',
-		count: 4
+		count: 4,
+		image: imgAccompagnements
 	},
 	{
 		name: 'Soupes',
 		slug: 'soupes',
 		description: 'Potages et bouillons réconfortants',
-		count: 3
+		count: 3,
+		image: imgSoupes
 	}
 ];
 ---
@@ -52,7 +79,7 @@ const categories = [
 			}
 
 			.hero h1 {
-				font-size: 2.8rem;
+				font-size: 3.2rem;
 				margin-bottom: 0.5rem;
 				font-weight: 700;
 			}
@@ -60,26 +87,35 @@ const categories = [
 			.hero-subtitle {
 				font-style: italic;
 				color: var(--text-muted);
-				font-size: 1.2rem;
+				font-size: 1.4rem;
 				margin: 0;
 			}
 
 			.hero-portrait {
 				margin-top: 1.75rem;
+				width: 240px;
+				height: 240px;
+				border-radius: 50%;
+				overflow: hidden;
+				border: 3px solid var(--accent);
+				box-shadow: 0 4px 15px rgba(90, 70, 55, 0.15);
+				margin-left: auto;
+				margin-right: auto;
 			}
 
 			.hero-portrait img {
-				border-radius: 50%;
-				border: 3px solid var(--accent);
-				box-shadow: 0 4px 15px rgba(90, 70, 55, 0.15);
+				width: 100%;
+				height: 100%;
 				object-fit: cover;
+				object-position: 42% center;
+				transform: scale(1.2);
 			}
 
 			.divider {
 				display: flex;
 				align-items: center;
 				gap: 1rem;
-				margin: 2rem auto;
+				margin: 1rem auto 2rem;
 				max-width: 300px;
 				color: var(--text-muted);
 			}
@@ -111,6 +147,129 @@ const categories = [
 				line-height: 1.8;
 			}
 
+			.famille {
+				text-align: center;
+				margin-bottom: 2rem;
+			}
+
+			.famille-title {
+				font-family: 'Dancing Script', cursive;
+				font-size: 1.8rem;
+				color: var(--accent);
+				margin-bottom: 1.5rem;
+			}
+
+			.famille-photos {
+				display: flex;
+				justify-content: center;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+
+			.famille-photos img {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				object-fit: cover;
+				border: 2px solid var(--accent);
+				box-shadow: 0 2px 8px rgba(90, 70, 55, 0.1);
+			}
+
+			/* Collage styling */
+			.famille-collage {
+				display: flex;
+				flex-direction: column;
+				gap: 0.75rem;
+				max-width: 900px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+
+			.collage-row {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 0.75rem;
+				flex-wrap: nowrap;
+				transition: transform 0.1s ease-out;
+			}
+
+			.collage-row.row-2 {
+				margin-top: -0.5rem;
+			}
+
+			.collage-row.row-3 {
+				margin-top: -0.5rem;
+			}
+
+			.collage-item {
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 4px 15px rgba(90, 70, 55, 0.15);
+				border: 3px solid white;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.collage-item:hover {
+				transform: scale(1.05) rotate(2deg);
+				box-shadow: 0 8px 25px rgba(90, 70, 55, 0.25);
+				z-index: 10;
+			}
+
+			.collage-item img {
+				display: block;
+				object-fit: cover;
+			}
+
+			.collage-item.size-lg {
+				width: 220px;
+				height: 220px;
+			}
+
+			.collage-item.size-lg img {
+				width: 220px;
+				height: 220px;
+			}
+
+			.collage-item.size-md {
+				width: 170px;
+				height: 170px;
+			}
+
+			.collage-item.size-md img {
+				width: 170px;
+				height: 170px;
+			}
+
+			.collage-item.size-sm {
+				width: 130px;
+				height: 130px;
+			}
+
+			.collage-item.size-sm img {
+				width: 130px;
+				height: 130px;
+			}
+
+			/* Slight rotations for puzzle effect */
+			.collage-row.row-1 .collage-item:nth-child(1) { transform: rotate(-3deg); }
+			.collage-row.row-1 .collage-item:nth-child(2) { transform: rotate(2deg); }
+			.collage-row.row-1 .collage-item:nth-child(3) { transform: rotate(-1deg); }
+			.collage-row.row-1 .collage-item:nth-child(4) { transform: rotate(3deg); }
+
+			.collage-row.row-2 .collage-item:nth-child(1) { transform: rotate(2deg); }
+			.collage-row.row-2 .collage-item:nth-child(2) { transform: rotate(-2deg); }
+			.collage-row.row-2 .collage-item:nth-child(3) { transform: rotate(1deg); }
+			.collage-row.row-2 .collage-item:nth-child(4) { transform: rotate(-3deg); }
+
+			.collage-row.row-3 .collage-item:nth-child(1) { transform: rotate(-2deg); }
+			.collage-row.row-3 .collage-item:nth-child(2) { transform: rotate(3deg); }
+			.collage-row.row-3 .collage-item:nth-child(3) { transform: rotate(-1deg); }
+
+			.divider-small {
+				margin: 2rem auto;
+			}
+
 			.categories-title {
 				text-align: center;
 				font-size: 1.1rem;
@@ -133,27 +292,14 @@ const categories = [
 
 			.category-card {
 				background: white;
-				border-radius: 6px;
-				padding: 1.75rem;
+				border-radius: 8px;
 				box-shadow: var(--box-shadow);
 				border: 1px solid rgba(230, 222, 210, 0.8);
 				transition: transform 0.2s ease, box-shadow 0.2s ease;
 				text-decoration: none;
 				display: block;
 				position: relative;
-			}
-
-			.category-card::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				height: 3px;
-				background: var(--accent);
-				border-radius: 6px 6px 0 0;
-				opacity: 0;
-				transition: opacity 0.2s ease;
+				overflow: hidden;
 			}
 
 			.category-card:hover {
@@ -161,25 +307,42 @@ const categories = [
 				box-shadow: var(--box-shadow-hover);
 			}
 
-			.category-card:hover::before {
-				opacity: 1;
+			.category-image {
+				width: 100%;
+				height: 200px;
+				overflow: hidden;
+			}
+
+			.category-image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: transform 0.3s ease;
+			}
+
+			.category-card:hover .category-image img {
+				transform: scale(1.05);
+			}
+
+			.category-content {
+				padding: 1.5rem;
 			}
 
 			.category-card h2 {
 				margin: 0 0 0.5rem;
-				font-size: 1.4rem;
+				font-size: 1.5rem;
 				color: var(--text);
 			}
 
 			.category-card p {
-				margin: 0 0 1rem;
+				margin: 0 0 0.75rem;
 				color: var(--text-muted);
-				font-size: 0.95rem;
+				font-size: 1rem;
 				line-height: 1.5;
 			}
 
 			.recipe-count {
-				font-size: 0.85rem;
+				font-size: 0.9rem;
 				color: var(--accent);
 				font-weight: 600;
 				display: inline-block;
@@ -221,6 +384,34 @@ const categories = [
 				.categories {
 					grid-template-columns: 1fr;
 				}
+				.collage-item.size-lg {
+					width: 120px;
+					height: 120px;
+				}
+				.collage-item.size-lg img {
+					width: 120px;
+					height: 120px;
+				}
+				.collage-item.size-md {
+					width: 90px;
+					height: 90px;
+				}
+				.collage-item.size-md img {
+					width: 90px;
+					height: 90px;
+				}
+				.collage-item.size-sm {
+					width: 70px;
+					height: 70px;
+				}
+				.collage-item.size-sm img {
+					width: 70px;
+					height: 70px;
+				}
+				.collage-row.row-2,
+				.collage-row.row-3 {
+					margin-top: -0.5rem;
+				}
 			}
 		</style>
 	</head>
@@ -228,10 +419,10 @@ const categories = [
 		<Header />
 		<main>
 			<section class="hero">
-				<h1>Les Recettes de Grand-mère</h1>
+				<h1>Les Recettes de Lorraine</h1>
 				<p class="hero-subtitle">Une collection de recettes familiales</p>
 				<div class="hero-portrait">
-					<Image src={mamieHero} alt="Mamie" width={140} height={140} />
+					<Image src={mamieHero} alt="Mamie" width={300} height={275} />
 				</div>
 			</section>
 
@@ -248,15 +439,47 @@ const categories = [
 				préservées pour les générations futures.
 			</p>
 
+			<section class="famille">
+				<p class="famille-title">Les clients satisfaits!</p>
+				<div class="famille-collage">
+					<div class="collage-row row-1">
+						<div class="collage-item size-lg"><Image src={client1} alt="Famille" width={280} height={280} /></div>
+						<div class="collage-item size-md"><Image src={client2} alt="Famille" width={200} height={200} /></div>
+						<div class="collage-item size-sm"><Image src={client3} alt="Famille" width={150} height={150} /></div>
+						<div class="collage-item size-md"><Image src={client4} alt="Famille" width={200} height={200} /></div>
+					</div>
+					<div class="collage-row row-2">
+						<div class="collage-item size-sm"><Image src={client5} alt="Famille" width={150} height={150} /></div>
+						<div class="collage-item size-lg"><Image src={client6} alt="Famille" width={280} height={280} /></div>
+						<div class="collage-item size-md"><Image src={client7} alt="Famille" width={200} height={200} /></div>
+						<div class="collage-item size-sm"><Image src={client8} alt="Famille" width={150} height={150} /></div>
+					</div>
+					<div class="collage-row row-3">
+						<div class="collage-item size-md"><Image src={client9} alt="Famille" width={200} height={200} /></div>
+						<div class="collage-item size-sm"><Image src={client10} alt="Famille" width={150} height={150} /></div>
+						<div class="collage-item size-lg"><Image src={client11} alt="Famille" width={280} height={280} /></div>
+					</div>
+				</div>
+			</section>
+
+			<div class="divider divider-small">
+				<span class="divider-icon">✦</span>
+			</div>
+
 			<p class="categories-title">Parcourir les recettes</p>
 
 			<ul class="categories">
 				{categories.map((cat) => (
 					<li>
 						<a href={`/recettes/${cat.slug}/`} class="category-card">
-							<h2>{cat.name}</h2>
-							<p>{cat.description}</p>
-							<span class="recipe-count">{cat.count} recettes</span>
+							<div class="category-image">
+								<Image src={cat.image} alt={cat.name} width={400} height={200} />
+							</div>
+							<div class="category-content">
+								<h2>{cat.name}</h2>
+								<p>{cat.description}</p>
+								<span class="recipe-count">{cat.count} recettes</span>
+							</div>
 						</a>
 					</li>
 				))}
@@ -270,5 +493,35 @@ const categories = [
 			</div>
 		</main>
 		<Footer />
+		<script>
+			// Horizontal parallax scroll effect for collage rows
+			const rows = document.querySelectorAll('.collage-row');
+
+			function handleScroll() {
+				const collage = document.querySelector('.famille-collage');
+				if (!collage) return;
+
+				const rect = collage.getBoundingClientRect();
+				const windowHeight = window.innerHeight;
+
+				// Calculate how far the collage is scrolled (0 = just entering view, 1 = leaving view)
+				const scrollProgress = (windowHeight - rect.top) / (windowHeight + rect.height);
+
+				// Clamp between 0 and 1
+				const progress = Math.max(0, Math.min(1, scrollProgress));
+
+				// Apply horizontal movement based on scroll
+				const maxMove = 50; // pixels to move
+
+				rows.forEach((row, index) => {
+					const direction = index % 2 === 0 ? 1 : -1; // alternating: right, left, right
+					const offset = (progress - 0.5) * maxMove * direction;
+					row.style.transform = `translateX(${offset}px)`;
+				});
+			}
+
+			window.addEventListener('scroll', handleScroll, { passive: true });
+			handleScroll(); // Initial call
+		</script>
 	</body>
 </html>

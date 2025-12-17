@@ -17,7 +17,7 @@ cookTime: "10 min"
 - 2 tasses cassonade
 - 1 c. à thé vanille
 
-## Directions
+## Préparation
 
 1. Mélanger les 3 premiers ingrédients ensemble.
 2. Faire fondre le beurre, lait et cassonade ensemble 5 min, sans bouillir.

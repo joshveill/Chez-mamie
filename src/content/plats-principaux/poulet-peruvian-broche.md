@@ -14,7 +14,7 @@ prepTime: "20 min"
 - 2 c. à thé vinaigre de vin blanc
 - 1 poulet entier
 
-## Directions
+## Préparation
 
 1. Badigeonner et massez le poulet, intérieur et extérieur.
 2. Attachez les pattes et les ailes.

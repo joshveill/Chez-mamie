@@ -13,7 +13,7 @@ prepTime: "15 min"
 - 1 tasse vinaigre
 - Betteraves cuites et pelées
 
-## Directions
+## Préparation
 
 1. Faire chauffer les trois premiers ingrédients.
 2. Couper et déposez les betteraves dans le pot.

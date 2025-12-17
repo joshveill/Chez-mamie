@@ -15,7 +15,7 @@ pubDate: 2025-12-16
 - 4 c. à table cassonade
 - Ail au goût
 
-## Directions
+## Préparation
 
 1. Bouillir les côtes levées 45 min avec oignon et base de poulet.
 2. Mariner la viande refroidie (min 1h30).

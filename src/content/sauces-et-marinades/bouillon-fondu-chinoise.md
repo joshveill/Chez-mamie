@@ -18,7 +18,7 @@ cookTime: "40 min"
 - 2 c. à table sauce chili
 - 1 tasse vin blanc sec
 
-## Directions
+## Préparation
 
 1. Fondre le beurre.
 2. Faire revenir l'oignon 5-7 minutes.

@@ -14,7 +14,7 @@ prepTime: "10 min"
 - 1 tasse peanuts salé
 - 1 tasse pretzel
 
-## Directions
+## Préparation
 
 1. Fondre chocolat au bain-marie.
 2. Étendre sur papier ciré.

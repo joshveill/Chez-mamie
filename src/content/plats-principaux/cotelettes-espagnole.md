@@ -18,7 +18,7 @@ cookTime: "10 min"
 - 3 c. à soupe de farine
 - Tranches d'oignons
 
-## Directions
+## Préparation
 
 1. Des tranches de côtelettes de lard, doré dans la poêle et saupoudrer de: 1 c. à thé de moutarde, 3 c. à thé de cassonade, 1 canne purée de tomates, 1 tasse de consommé, ¾ tasse d'eau.
 2. Porter ces ingrédients à ébullition et épaissir avec 3 c. à soupe de farine.

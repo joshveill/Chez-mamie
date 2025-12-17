@@ -13,7 +13,7 @@ prepTime: "10 min"
 - 1 tasse de crème 35%
 - ½ c. à thé d'essence d'érable
 
-## Directions
+## Préparation
 
 1. Graisser le haut du plat de cuisson avec du beurre.
 2. Mélanger les ingrédients et cuire au micro-ondes 9 min.

@@ -16,7 +16,7 @@ cookTime: "10 min"
 - 3½ tasses de sucre en poudre
 - 1 lb de peanuts écrasés
 
-## Directions
+## Préparation
 
 1. Faire fondre la paraffine et fermer le feu.
 2. Ajouter le chocolat et tous les autres ingrédients.

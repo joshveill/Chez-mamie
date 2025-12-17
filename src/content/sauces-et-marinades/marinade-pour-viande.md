@@ -14,7 +14,7 @@ pubDate: 2025-12-16
 - 7 ml ail en poudre
 - 1 échalote hachée fin
 
-## Directions
+## Préparation
 
 1. Mélangez et bien agiter.
 2. Verser sur viande et laissez à la température de la pièce 4 hrs ou au réfrigérateur jusqu'au lendemain.

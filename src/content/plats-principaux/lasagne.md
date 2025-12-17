@@ -18,7 +18,7 @@ cookTime: "40 min"
 - 1 recette de base aux tomates
 - ¼ c. à thé romarin
 
-## Directions
+## Préparation
 
 1. Dorer la viande. Enlever l'excès de gras. Ajouter la viande à la base au tomate. Laisser mijoter 30 min avec couvercle. Cuire lasagne dans l'eau bouillant salé 10 à 15 min.
 2. Égoutter sur papier absorbant. Étendre ¼ de la sauce dans un plat en verre de 12 x 9, disposer ⅓ des nouilles sur le dessus.

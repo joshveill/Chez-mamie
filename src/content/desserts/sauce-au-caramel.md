@@ -16,7 +16,7 @@ cookTime: "5 min"
 - ⅔ tasse de crème
 - ¼ tasse de lait
 
-## Directions
+## Préparation
 
 1. Mélanger les liquides et incorporer le mélange de cassonade et farine.
 2. Faire bouillir 5 minutes.

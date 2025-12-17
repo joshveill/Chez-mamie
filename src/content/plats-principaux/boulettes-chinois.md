@@ -26,7 +26,7 @@ cookTime: "1h30"
 - 1 piment en cubes
 - 3-4 c. à thé sauce soya
 
-## Directions
+## Préparation
 
 1. Cuire le tout jusqu'à ébullition.
 2. Épaissir avec une c. à thé de fécule de maïs.

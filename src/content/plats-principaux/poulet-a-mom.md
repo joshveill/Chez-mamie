@@ -22,7 +22,7 @@ prepTime: "15 min"
 - 4 feuilles de sauge
 - 4 branches de romarin
 
-## Directions
+## Préparation
 
 1. Huiler le papier d'aluminium.
 2. BBQ à medium, fermer le couvercle et mettre de l'eau.

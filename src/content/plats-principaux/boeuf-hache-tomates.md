@@ -18,6 +18,6 @@ cookTime: "30 min - 1 heure"
 - 1 c. à thé Tabasco
 - Sel et poivre
 
-## Directions
+## Préparation
 
 1. 30 min à 1 heure sur la cuisinière.

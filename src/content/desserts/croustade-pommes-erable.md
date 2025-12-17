@@ -17,7 +17,7 @@ cookTime: "35 min"
 - ½ tasse beurre
 - Sel
 
-## Directions
+## Préparation
 
 1. Disposer les pommes dans un plat allant au four. Verser le sirop sur les pommes.
 2. Mélangez tous les autres ingrédients jusqu'à ce que le mélange ait l'aspect d'une chapelure. Saupoudrer sur les pommes.

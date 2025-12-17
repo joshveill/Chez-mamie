@@ -22,7 +22,7 @@ cookTime: "45 min"
 - 1 c. à thé moutarde sèche + ¼ tasse cassonade
 - Fécule de maïs pour épaissir
 
-## Directions
+## Préparation
 
 1. Mélanger parfaitement le lard + jambon haché, la chapelure, l'oeuf et le lait.
 2. Façonner les boulettes avec une cuillère de crème glacée.

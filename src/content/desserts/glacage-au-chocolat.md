@@ -14,7 +14,7 @@ prepTime: "10 min"
 - 1 c. à table de rhum
 - ½ c. à thé de vanille
 
-## Directions
+## Préparation
 
 1. Chauffer la crème, beurre, chocolat et rhum.
 2. Ajouter vanille à la fin.

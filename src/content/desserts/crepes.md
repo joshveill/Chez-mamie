@@ -14,6 +14,6 @@ cookTime: "15 min"
 - 3 oeufs
 - Pincée de sel
 
-## Directions
+## Préparation
 
 1. Ajouter du lait jusqu'à l'obtention d'une belle pâte lisse.

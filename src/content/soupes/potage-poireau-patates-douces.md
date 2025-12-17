@@ -18,7 +18,7 @@ cookTime: "45 min"
 - Sel et poivre
 - Ciboulette fraîche pour garnir
 
-## Directions
+## Préparation
 
 1. Faire suer les poireaux et oignons dans le beurre et l'huile pendant 5 min.
 2. Ajouter patates douces et cuire 15 min.

@@ -19,7 +19,7 @@ cookTime: "1 heure"
 - 3 bananes
 - ½ tasse de lait ou crème sure ou yogourt
 
-## Directions
+## Préparation
 
 1. Four à 350°F – beurrer le moule.
 2. Fouetter beurre et cassonade.

@@ -12,7 +12,7 @@ pubDate: 2025-12-16
 - ½ c. à thé vanille
 - 6 tasses (1.5L) Rice Krispies
 
-## Directions
+## Préparation
 
 1. Chauffer la margarine à feu doux dans une grande casserole. Ajouter les guimauves; remuer jusqu'à ce qu'elles soient fondues et homogènes. Retirer du feu.
 2. Ajouter la vanille. Ajouter les céréales en remuant pour bien enrober.

@@ -14,7 +14,7 @@ cookTime: "1 heure"
 - 1 c. à thé vanille
 - 1½ noix Grenobles hachés
 
-## Directions
+## Préparation
 
 1. Fondre chocolat et lait au micro-ondes 3 min. Bien mélanger.
 2. Ajouter vanille et noix.

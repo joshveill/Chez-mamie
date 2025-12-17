@@ -22,7 +22,7 @@ cookTime: "45 min"
 - 16 morceaux de poivrons verts
 - 16 tranches d'oignons
 
-## Directions
+## Préparation
 
 1. Mélanger les 6 premiers ingrédients et verser sur le poulet.
 2. Couvrir et réfrigérer 12 à 14 heures.

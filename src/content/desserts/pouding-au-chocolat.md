@@ -20,7 +20,7 @@ cookTime: "40 min"
 - Chocolate chips
 - Noix
 
-## Directions
+## Préparation
 
 1. Chauffer l'huile et le chocolat.
 2. Ajouter le reste.

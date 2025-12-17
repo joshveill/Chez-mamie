@@ -17,7 +17,7 @@ cookTime: "1 heure"
 - Framboises ou autres fruits
 - Sucre (optionnel, pour saupoudrer)
 
-## Directions
+## Préparation
 
 1. Mettre 2 oeufs dans une tasse à mesurer et remplir de crème 35% jusqu'à la ligne de 1 tasse.
 2. Battre le mélange oeufs/crème avec le sucre.

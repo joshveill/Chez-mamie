@@ -24,7 +24,7 @@ cookTime: "1-2 heures"
 - ¼ c. à thé thym
 - ¼ c. à thé romarin
 
-## Directions
+## Préparation
 
 1. Cuire l'ail et l'oignon dans l'huile.
 2. Ajouter le reste des ingrédients. Bien mélanger et écraser les morceaux de tomates.

@@ -18,7 +18,7 @@ prepTime: "15 min"
 - ¼ tasse beurre mou
 - 1½ tasse de sucre en poudre
 
-## Directions
+## Préparation
 
 1. Battre tous les ingrédients de préparation au malaxeur.
 2. 1 rangée de biscuits, 1 rangée de préparation, 1 rangée d'ananas.

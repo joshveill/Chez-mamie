@@ -22,7 +22,7 @@ cookTime: "40 min"
 - ¼ tasse de vin blanc
 - 1 échalote française hachée finement
 
-## Directions
+## Préparation
 
 1. Four à 450°F.
 2. Étendre le beurre sur le carré.

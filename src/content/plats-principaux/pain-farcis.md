@@ -17,7 +17,7 @@ cookTime: "1 heure"
 - 1 c. à thé sauce Worcestershire
 - Sel et poivre
 
-## Directions
+## Préparation
 
 1. Cuire oignon dans l'huile. Revenir la viande.
 2. Ajouter le reste des ingrédients.

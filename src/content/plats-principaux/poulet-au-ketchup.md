@@ -20,7 +20,7 @@ cookTime: "2-4 heures"
 - ¼ c. à thé de sariette
 - 1 tasse d'eau
 
-## Directions
+## Préparation
 
 1. Mélangez les ingrédients ensemble.
 2. Faire brunir du beurre.

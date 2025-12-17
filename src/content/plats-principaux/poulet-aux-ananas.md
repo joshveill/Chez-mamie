@@ -15,6 +15,6 @@ cookTime: "30 min"
 - 1 boîte sauce tomates
 - (Bouillir chili, ananas et sauce tomates 25 min)
 
-## Directions
+## Préparation
 
 - 30 min au four à 300°F
