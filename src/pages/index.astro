@@ -5,7 +5,17 @@ import Header from '../components/Header.astro';
 import Search from '../components/Search.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import mamieHero from '../assets/mamie-hero.jpg';
+
+// Count all recipes
+const allRecipes = [
+	...(await getCollection('plats-principaux')),
+	...(await getCollection('desserts')),
+	...(await getCollection('soupes')),
+	...(await getCollection('sauces-et-accompagnements')),
+];
+const totalRecipes = allRecipes.length;
 
 // Dish type images
 import imgPlats from '../assets/dish-type-images/Plats.jpg';
@@ -431,7 +441,7 @@ const categories = [
 			</div>
 
 			<p class="intro">
-				Soixante-trois recettes transcrites avec soin des fiches manuscrites de grand-mère Lorraine,
+				{totalRecipes} recettes transcrites avec soin des fiches manuscrites de grand-mère Lorraine,
 				préservées pour les générations futures.
 			</p>
 
