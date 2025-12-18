@@ -28,7 +28,8 @@ cookTime: "1h30"
 
 ## Préparation
 
-1. Cuire le tout jusqu'à ébullition.
-2. Épaissir avec une c. à thé de fécule de maïs.
-3. Jeter la sauce sur les boulettes.
-4. Cuire à 350°F environ 1h30.
+1. Faire dorer les boulettes.
+2. Mélanger tous les ingrédients de la sauce et cuire jusqu'à ébullition.
+3. Épaissir avec une c. à thé de fécule de maïs.
+4. Jeter la sauce sur les boulettes.
+5. Cuire à 350°F environ 1h30.
