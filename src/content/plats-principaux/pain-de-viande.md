@@ -1,5 +1,5 @@
 ---
-title: "Pain de Viande"
+title: "Pain de viande"
 titleEnglish: "Meatloaf"
 description: "Pain de viande au boeuf avec riz et sauce aigre-douce VH"
 pubDate: 2025-12-16

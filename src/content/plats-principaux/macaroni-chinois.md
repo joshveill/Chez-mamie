@@ -1,5 +1,5 @@
 ---
-title: "Macaroni Chinois"
+title: "Macaroni chinois"
 titleEnglish: "Chinese Macaroni Stir-Fry"
 description: "Sauté de macaroni avec steak, légumes et fèves germées au wok"
 pubDate: 2025-12-16

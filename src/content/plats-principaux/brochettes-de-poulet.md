@@ -1,5 +1,5 @@
 ---
-title: "Brochettes de Poulet"
+title: "Brochettes de poulet"
 titleEnglish: "Chicken Skewers"
 description: "Brochettes marinées au miel et soya avec légumes grillés"
 pubDate: 2025-12-16

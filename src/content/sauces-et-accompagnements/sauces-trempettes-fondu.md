@@ -1,5 +1,5 @@
 ---
-title: "Sauces Trempettes pour Fondue"
+title: "Sauces trempettes pour fondue"
 titleEnglish: "Fondue Dipping Sauces"
 description: "Trois sauces d'accompagnement pour fondue: chili, rose et relish"
 pubDate: 2025-12-16

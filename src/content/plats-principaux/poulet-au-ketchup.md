@@ -1,5 +1,5 @@
 ---
-title: "Poulet au Ketchup"
+title: "Poulet au ketchup"
 titleEnglish: "Ketchup Chicken"
 description: "Poulet rôti lentement dans une sauce au ketchup, vinaigre et ail"
 pubDate: 2025-12-16

@@ -1,5 +1,5 @@
 ---
-title: "Sucre à la Crème"
+title: "Sucre à la crème"
 titleEnglish: "Maple Cream Fudge"
 description: "Sucre à la crème traditionnel à l'érable au micro-ondes"
 pubDate: 2025-12-16

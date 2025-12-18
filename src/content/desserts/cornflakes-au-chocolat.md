@@ -1,5 +1,5 @@
 ---
-title: "Cornflakes au Chocolat"
+title: "Cornflakes au chocolat"
 titleEnglish: "Chocolate Cornflakes"
 description: "Bouchées chocolatées aux cornflakes et beurre d'arachide"
 pubDate: 2025-12-16

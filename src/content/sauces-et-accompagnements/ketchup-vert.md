@@ -1,5 +1,5 @@
 ---
-title: "Ketchup Vert"
+title: "Ketchup vert"
 titleEnglish: "Green Tomato Ketchup"
 description: "Ketchup aux tomates vertes épicé à la cannelle et muscade"
 pubDate: 2025-12-16

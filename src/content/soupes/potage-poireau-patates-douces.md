@@ -1,5 +1,5 @@
 ---
-title: "Potage au Poireau et Patates Douces"
+title: "Potage au poireau et patates douces"
 titleEnglish: "Leek and Sweet Potato Soup"
 description: "Velouté crémeux aux poireaux et patates douces garni de ciboulette"
 pubDate: 2025-12-16

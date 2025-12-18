@@ -1,5 +1,5 @@
 ---
-title: "Bouillon aux Légumes"
+title: "Bouillon aux légumes"
 titleEnglish: "Vegetable Broth Soup"
 description: "Bouillon de poulet léger aux champignons, céleri et oignon rouge"
 pubDate: 2025-12-16

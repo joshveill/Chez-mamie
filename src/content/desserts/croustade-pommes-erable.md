@@ -1,5 +1,5 @@
 ---
-title: "Croustade de Pommes à l'Érable"
+title: "Croustade de pommes à l'érable"
 titleEnglish: "Maple Apple Crisp"
 description: "Croustade aux pommes et sirop d'érable avec garniture au gruau"
 pubDate: 2025-12-16

@@ -1,5 +1,5 @@
 ---
-title: "Pouding au Chocolat (fourchette)"
+title: "Pouding au chocolat (fourchette)"
 titleEnglish: "Fork Chocolate Pudding Cake"
 description: "Gâteau pouding au chocolat fondant avec pépites et noix"
 pubDate: 2025-12-16

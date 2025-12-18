@@ -1,5 +1,5 @@
 ---
-title: "Beurre à l'Ail"
+title: "Beurre à l'ail"
 titleEnglish: "Garlic Butter"
 description: "Beurre composé à l'ail, persil et fines herbes"
 pubDate: 2025-12-16

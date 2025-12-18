@@ -1,5 +1,5 @@
 ---
-title: "Délices aux Ananas"
+title: "Délices aux ananas"
 titleEnglish: "Pineapple Delight"
 description: "Dessert en couches avec biscuits Graham, crème et ananas"
 pubDate: 2025-12-16

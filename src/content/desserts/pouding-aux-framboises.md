@@ -1,5 +1,5 @@
 ---
-title: "Pouding aux Framboises"
+title: "Pouding aux framboises"
 titleEnglish: "Raspberry Pudding Cake"
 description: "Gâteau pouding moelleux aux framboises fraîches"
 pubDate: 2025-12-16

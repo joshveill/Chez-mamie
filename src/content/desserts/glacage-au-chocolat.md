@@ -1,5 +1,5 @@
 ---
-title: "Glaçage au Chocolat"
+title: "Glaçage au chocolat"
 titleEnglish: "Chocolate Glaze"
 description: "Glaçage riche au chocolat mi-amer, crème et rhum"
 pubDate: 2025-12-16

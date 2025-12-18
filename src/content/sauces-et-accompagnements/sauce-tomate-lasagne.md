@@ -1,5 +1,5 @@
 ---
-title: "Sauce Tomate pour Lasagne"
+title: "Sauce tomate pour lasagne"
 titleEnglish: "Tomato Sauce for Lasagna"
 description: "Sauce tomate aux fines herbes italiennes mijotée longuement"
 pubDate: 2025-12-16

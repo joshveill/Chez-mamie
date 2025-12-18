@@ -1,5 +1,5 @@
 ---
-title: "Riz au Poulet"
+title: "Riz au poulet"
 titleEnglish: "Chicken Rice"
 description: "Salade de riz au poulet avec vinaigrette soya et céleri"
 pubDate: 2025-12-16

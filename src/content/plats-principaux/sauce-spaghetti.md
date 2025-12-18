@@ -1,5 +1,5 @@
 ---
-title: "Sauce Spaghetti"
+title: "Sauce spaghetti"
 titleEnglish: "Spaghetti Sauce"
 description: "Sauce tomate maison mijotée 3 heures avec boeuf haché et légumes"
 pubDate: 2025-12-16

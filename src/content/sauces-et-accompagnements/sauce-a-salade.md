@@ -1,5 +1,5 @@
 ---
-title: "Sauce à Salade"
+title: "Sauce à salade"
 titleEnglish: "Salad Dressing"
 description: "Vinaigrette maison à la soupe aux tomates et sauce HP"
 pubDate: 2025-12-16

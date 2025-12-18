@@ -1,5 +1,5 @@
 ---
-title: "Ravioli et Sauce Ravioli"
+title: "Ravioli et sauce ravioli"
 titleEnglish: "Homemade Ravioli with Sauce"
 description: "Ravioli maison farcis au boeuf et saucisse avec sauce tomate aux herbes"
 pubDate: 2025-12-16

@@ -1,5 +1,5 @@
 ---
-title: "Boeuf Haché Tomates"
+title: "Boeuf haché tomates"
 titleEnglish: "Ground Beef with Tomatoes"
 description: "Poêlée de boeuf haché aux tomates, riz et champignons"
 pubDate: 2025-12-16

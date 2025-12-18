@@ -1,5 +1,5 @@
 ---
-title: "Soupe à l'Oignon"
+title: "Soupe à l'oignon"
 titleEnglish: "French Onion Soup"
 description: "Soupe à l'oignon gratinée au bouillon de boeuf et vin blanc"
 pubDate: 2025-12-16

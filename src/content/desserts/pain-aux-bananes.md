@@ -1,5 +1,5 @@
 ---
-title: "Pain aux Bananes"
+title: "Pain aux bananes"
 titleEnglish: "Banana Bread"
 description: "Pain aux bananes moelleux avec farines blanche et de blé"
 pubDate: 2025-12-16

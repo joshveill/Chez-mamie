@@ -1,5 +1,5 @@
 ---
-title: "Biscuits au Gruau Chocolaté"
+title: "Biscuits au gruau chocolaté"
 titleEnglish: "Chocolate Oatmeal Cookies"
 description: "Biscuits sans cuisson au gruau, cacao et noix de coco"
 pubDate: 2025-12-16

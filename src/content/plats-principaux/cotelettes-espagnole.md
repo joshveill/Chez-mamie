@@ -1,5 +1,5 @@
 ---
-title: "Côtelettes Espagnole"
+title: "Côtelettes espagnole"
 titleEnglish: "Spanish-Style Pork Chops"
 description: "Côtelettes de porc dorées dans une sauce tomate épicée avec oignons"
 pubDate: 2025-12-16

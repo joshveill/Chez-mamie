@@ -1,5 +1,5 @@
 ---
-title: "Carré de Porc en Croûte"
+title: "Carré de porc en croûte"
 titleEnglish: "Herb-Crusted Pork Loin"
 description: "Carré de porc aux fines herbes fraîches avec sauce au vin blanc"
 pubDate: 2025-12-16

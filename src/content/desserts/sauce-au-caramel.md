@@ -1,5 +1,5 @@
 ---
-title: "Sauce au Caramel"
+title: "Sauce au caramel"
 titleEnglish: "Caramel Sauce"
 description: "Sauce au caramel onctueuse à la cassonade et crème"
 pubDate: 2025-12-16

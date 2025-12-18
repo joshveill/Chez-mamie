@@ -1,5 +1,5 @@
 ---
-title: "Gâteau Crunchie"
+title: "Gâteau crunchie"
 titleEnglish: "Crunchie Meringue Cake"
 description: "Gâteau meringué aux barres Crunchie et crème fouettée"
 pubDate: 2025-12-16

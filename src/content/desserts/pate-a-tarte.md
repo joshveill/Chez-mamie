@@ -1,5 +1,5 @@
 ---
-title: "Pâte à Tarte"
+title: "Pâte à tarte"
 titleEnglish: "Pie Crust"
 description: "Pâte à tarte traditionnelle feuilletée"
 pubDate: 2025-12-16

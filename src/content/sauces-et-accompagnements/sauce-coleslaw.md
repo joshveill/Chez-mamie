@@ -1,5 +1,5 @@
 ---
-title: "Sauce Coleslaw"
+title: "Sauce coleslaw"
 titleEnglish: "Coleslaw Dressing"
 description: "Vinaigrette crémeuse pour salade de chou"
 pubDate: 2025-12-16

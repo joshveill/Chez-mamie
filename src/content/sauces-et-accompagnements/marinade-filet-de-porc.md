@@ -1,5 +1,5 @@
 ---
-title: "Marinade Filet de Porc"
+title: "Marinade filet de porc"
 titleEnglish: "Pork Fillet Marinade"
 description: "Marinade à la moutarde de Dijon, soya et citron pour filet de porc"
 pubDate: 2025-12-16

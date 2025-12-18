@@ -1,5 +1,5 @@
 ---
-title: "Poulet Peruvian Broche"
+title: "Poulet peruvian broche"
 titleEnglish: "Peruvian Rotisserie Chicken"
 description: "Poulet entier mariné à l'ail et vinaigre, cuit à la broche au BBQ"
 pubDate: 2025-12-16

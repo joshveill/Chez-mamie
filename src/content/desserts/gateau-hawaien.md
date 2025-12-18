@@ -1,5 +1,5 @@
 ---
-title: "Gâteau Hawaien"
+title: "Gâteau hawaien"
 titleEnglish: "Hawaiian Cake"
 description: "Gâteau doré à l'ananas avec glaçage au fromage et pouding"
 pubDate: 2025-12-16

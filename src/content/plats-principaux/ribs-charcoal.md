@@ -1,5 +1,5 @@
 ---
-title: "Ribs Charcoal"
+title: "Ribs charcoal"
 titleEnglish: "Charcoal BBQ Ribs"
 description: "Côtes levées bouillies puis grillées avec sauce BBQ teriyaki"
 pubDate: 2025-12-16

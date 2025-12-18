@@ -1,5 +1,5 @@
 ---
-title: "Sauce au Chocolat"
+title: "Sauce au chocolat"
 titleEnglish: "Chocolate Sauce"
 description: "Sauce au chocolat noir riche à la crème et rhum"
 pubDate: 2025-12-16

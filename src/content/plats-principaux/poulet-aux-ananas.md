@@ -1,5 +1,5 @@
 ---
-title: "Poulet aux Ananas"
+title: "Poulet aux ananas"
 titleEnglish: "Pineapple Chicken"
 description: "Poitrines de poulet en sauce chili et ananas au four"
 pubDate: 2025-12-16

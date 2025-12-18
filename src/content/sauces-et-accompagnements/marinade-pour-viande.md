@@ -1,5 +1,5 @@
 ---
-title: "Marinade pour Viande"
+title: "Marinade pour viande"
 titleEnglish: "Meat Marinade"
 description: "Marinade universelle au soya, miel et vinaigre de vin"
 pubDate: 2025-12-16

@@ -1,5 +1,5 @@
 ---
-title: "Boulettes à Sauce BBQ"
+title: "Boulettes à sauce BBQ"
 titleEnglish: "BBQ Meatballs"
 description: "Boulettes de boeuf maison nappées de sauce BBQ au four"
 pubDate: 2025-12-16

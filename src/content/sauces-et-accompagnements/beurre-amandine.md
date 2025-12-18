@@ -1,5 +1,5 @@
 ---
-title: "Beurre Amandine"
+title: "Beurre amandine"
 titleEnglish: "Almond Butter Sauce"
 description: "Beurre aux amandes grillées, ail et vin blanc pour poisson"
 pubDate: 2025-12-16

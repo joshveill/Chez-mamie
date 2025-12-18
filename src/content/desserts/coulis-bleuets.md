@@ -1,5 +1,5 @@
 ---
-title: "Coulis Bleuets"
+title: "Coulis bleuets"
 titleEnglish: "Blueberry Coulis"
 description: "Coulis de bleuets simple et rapide"
 pubDate: 2025-12-16

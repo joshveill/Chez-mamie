@@ -1,5 +1,5 @@
 ---
-title: "Boulettes de Jambon Ananas"
+title: "Boulettes de jambon ananas"
 titleEnglish: "Ham and Pineapple Meatballs"
 description: "Boulettes de jambon et porc servies sur ananas avec sauce sucrée"
 pubDate: 2025-12-16

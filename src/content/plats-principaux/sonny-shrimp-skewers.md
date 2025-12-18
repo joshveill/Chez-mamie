@@ -1,6 +1,6 @@
 ---
-title: "Brochettes de Crevettes de Sonny"
-titleEnglish: "Sonny's Shrimp Skewers"
+title: "Brochettes de crevettes"
+titleEnglish: "Shrimp Skewers"
 description: "Brochettes de crevettes marinées à l'orange et gingembre"
 pubDate: 2025-12-16
 prepTime: "10 min"

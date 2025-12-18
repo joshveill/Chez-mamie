@@ -1,5 +1,5 @@
 ---
-title: "Vinaigre Framboise"
+title: "Vinaigre framboise"
 titleEnglish: "Homemade Raspberry Vinegar"
 description: "Vinaigre de framboise maison infusé pendant 12 jours"
 pubDate: 2025-12-16

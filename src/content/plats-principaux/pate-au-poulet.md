@@ -1,5 +1,5 @@
 ---
-title: "Pâté au Poulet"
+title: "Pâté au poulet"
 titleEnglish: "Chicken Pot Pie"
 description: "Pâté crémeux au poulet avec patates et carottes en croûte"
 pubDate: 2025-12-16

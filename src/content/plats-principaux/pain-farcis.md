@@ -1,5 +1,5 @@
 ---
-title: "Pain Farcis"
+title: "Pain farcis"
 titleEnglish: "Stuffed Bread / Sloppy Joes"
 description: "Garniture de porc haché épicée pour sandwichs, mijotée une heure"
 pubDate: 2025-12-16

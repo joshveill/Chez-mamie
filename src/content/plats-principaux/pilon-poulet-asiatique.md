@@ -1,5 +1,5 @@
 ---
-title: "Pilon de Poulet à l'Asiatique"
+title: "Pilon de poulet à l'asiatique"
 titleEnglish: "Asian Chicken Drumsticks"
 description: "Pilons de poulet glacés au miel, sauce hoisin et gingembre"
 pubDate: 2025-12-16

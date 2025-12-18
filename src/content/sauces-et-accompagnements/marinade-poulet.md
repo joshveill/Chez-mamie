@@ -1,5 +1,5 @@
 ---
-title: "Marinade Poulet (pour brochettes)"
+title: "Marinade poulet (pour brochettes)"
 titleEnglish: "Chicken Marinade for Skewers"
 description: "Marinade sucrée au miel et soya pour brochettes de poulet"
 pubDate: 2025-12-16

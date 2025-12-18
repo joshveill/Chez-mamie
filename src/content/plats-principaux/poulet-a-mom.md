@@ -1,5 +1,5 @@
 ---
-title: "Poulet à Mom"
+title: "Poulet à mom"
 titleEnglish: "Mom's Chicken"
 description: "Cuisses de poulet grillées avec sauce à l'érable, Tabasco et fines herbes"
 pubDate: 2025-12-16

@@ -1,5 +1,5 @@
 ---
-title: "Ketchup Rouge"
+title: "Ketchup rouge"
 titleEnglish: "Homemade Red Ketchup"
 description: "Ketchup maison aux tomates, pommes et pêches"
 pubDate: 2025-12-16
