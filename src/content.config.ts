@@ -24,13 +24,8 @@ const soupes = defineCollection({
 	schema: recipeSchema,
 });
 
-const saucesEtMarinades = defineCollection({
-	loader: glob({ base: './src/content/sauces-et-marinades', pattern: '**/*.{md,mdx}' }),
-	schema: recipeSchema,
-});
-
-const accompagnements = defineCollection({
-	loader: glob({ base: './src/content/accompagnements', pattern: '**/*.{md,mdx}' }),
+const saucesEtAccompagnements = defineCollection({
+	loader: glob({ base: './src/content/sauces-et-accompagnements', pattern: '**/*.{md,mdx}' }),
 	schema: recipeSchema,
 });
 
@@ -42,7 +37,6 @@ const desserts = defineCollection({
 export const collections = {
 	'plats-principaux': platsPrincipaux,
 	soupes,
-	'sauces-et-marinades': saucesEtMarinades,
-	accompagnements,
+	'sauces-et-accompagnements': saucesEtAccompagnements,
 	desserts,
 };

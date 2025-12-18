@@ -11,7 +11,6 @@ import mamieHero from '../assets/mamie-hero.jpg';
 import imgPlats from '../assets/dish-type-images/Plats.jpg';
 import imgDesserts from '../assets/dish-type-images/Dessert.jpg';
 import imgSauces from '../assets/dish-type-images/Sauces.jpg';
-import imgAccompagnements from '../assets/dish-type-images/Accompagnement.jpg';
 import imgSoupes from '../assets/dish-type-images/Soupes.jpg';
 
 // Client photos
@@ -47,25 +46,18 @@ const categories = [
 		image: imgDesserts
 	},
 	{
-		name: 'Sauces et Marinades',
-		slug: 'sauces-et-marinades',
-		description: 'Vinaigrettes, trempettes et marinades',
-		count: 16,
-		image: imgSauces
-	},
-	{
-		name: 'Accompagnements',
-		slug: 'accompagnements',
-		description: 'Conserves et condiments maison',
-		count: 4,
-		image: imgAccompagnements
-	},
-	{
 		name: 'Soupes',
 		slug: 'soupes',
 		description: 'Potages et bouillons réconfortants',
 		count: 3,
 		image: imgSoupes
+	},
+	{
+		name: 'Les Extras',
+		slug: 'sauces-et-accompagnements',
+		description: 'Vinaigrettes, marinades, trempettes et condiments',
+		count: 20,
+		image: imgSauces
 	}
 ];
 ---
@@ -77,12 +69,12 @@ const categories = [
 		<style>
 			.hero {
 				text-align: center;
-				padding: 3rem 1rem 2rem;
+				padding: 1.5rem 1rem 1rem;
 			}
 
 			.hero h1 {
 				font-size: 3.2rem;
-				margin-bottom: 0.5rem;
+				margin-bottom: 0;
 				font-weight: 700;
 			}
 
@@ -94,9 +86,9 @@ const categories = [
 			}
 
 			.hero-portrait {
-				margin-top: 1.75rem;
-				width: 240px;
-				height: 240px;
+				margin-top: 1rem;
+				width: 200px;
+				height: 200px;
 				border-radius: 50%;
 				overflow: hidden;
 				border: 3px solid var(--accent);
@@ -212,12 +204,7 @@ const categories = [
 				transition: transform 0.3s ease, box-shadow 0.3s ease;
 			}
 
-			.collage-item:hover {
-				transform: scale(1.05) rotate(2deg);
-				box-shadow: 0 8px 25px rgba(90, 70, 55, 0.25);
-				z-index: 10;
-			}
-
+			
 			.collage-item img {
 				display: block;
 				object-fit: cover;
@@ -383,36 +370,43 @@ const categories = [
 				.hero-subtitle {
 					font-size: 1.1rem;
 				}
+				.hero-portrait {
+					width: 140px;
+					height: 140px;
+				}
 				.categories {
 					grid-template-columns: 1fr;
 				}
 				.collage-item.size-lg {
-					width: 120px;
-					height: 120px;
+					width: 80px;
+					height: 80px;
 				}
 				.collage-item.size-lg img {
-					width: 120px;
-					height: 120px;
+					width: 80px;
+					height: 80px;
 				}
 				.collage-item.size-md {
-					width: 90px;
-					height: 90px;
+					width: 65px;
+					height: 65px;
 				}
 				.collage-item.size-md img {
-					width: 90px;
-					height: 90px;
+					width: 65px;
+					height: 65px;
 				}
 				.collage-item.size-sm {
-					width: 70px;
-					height: 70px;
+					width: 50px;
+					height: 50px;
 				}
 				.collage-item.size-sm img {
-					width: 70px;
-					height: 70px;
+					width: 50px;
+					height: 50px;
 				}
 				.collage-row.row-2,
 				.collage-row.row-3 {
 					margin-top: -0.5rem;
+				}
+				.famille-title {
+					font-size: 1.8rem;
 				}
 			}
 		</style>

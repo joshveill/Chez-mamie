@@ -10,7 +10,6 @@ import { Image } from 'astro:assets';
 import imgPlats from '../../../assets/dish-type-images/Plats.jpg';
 import imgDesserts from '../../../assets/dish-type-images/Dessert.jpg';
 import imgSauces from '../../../assets/dish-type-images/Sauces.jpg';
-import imgAccompagnements from '../../../assets/dish-type-images/Accompagnement.jpg';
 import imgSoupes from '../../../assets/dish-type-images/Soupes.jpg';
 
 const categoryInfo: Record<string, { name: string; description: string; image: ImageMetadata }> = {
@@ -24,15 +23,10 @@ const categoryInfo: Record<string, { name: string; description: string; image: I
 		description: 'Gâteaux, biscuits et sucreries',
 		image: imgDesserts
 	},
-	'sauces-et-marinades': {
-		name: 'Sauces et Marinades',
-		description: 'Vinaigrettes, trempettes et marinades',
+	'sauces-et-accompagnements': {
+		name: 'Les Extras',
+		description: 'Vinaigrettes, marinades, trempettes et condiments',
 		image: imgSauces
-	},
-	'accompagnements': {
-		name: 'Accompagnements',
-		description: 'Conserves et condiments maison',
-		image: imgAccompagnements
 	},
 	'soupes': {
 		name: 'Soupes',
@@ -42,7 +36,7 @@ const categoryInfo: Record<string, { name: string; description: string; image: I
 };
 
 export async function getStaticPaths() {
-	const categories = ['plats-principaux', 'desserts', 'sauces-et-marinades', 'accompagnements', 'soupes'];
+	const categories = ['plats-principaux', 'desserts', 'sauces-et-accompagnements', 'soupes'];
 	return categories.map((category) => ({
 		params: { category },
 	}));
