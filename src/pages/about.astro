@@ -3,6 +3,12 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_TITLE } from '../consts';
+import { Image } from 'astro:assets';
+
+import photo1 from '../assets/À propos/IMG_0362.jpeg';
+import photo2 from '../assets/À propos/IMG_0509.jpeg';
+import photo3 from '../assets/À propos/IMG_5491.jpg';
+import photo4 from '../assets/À propos/IMG_5498.jpg';
 ---
 
 <!doctype html>
@@ -76,6 +82,87 @@ import { SITE_TITLE } from '../consts';
 				margin-top: 2rem;
 				color: var(--accent);
 			}
+
+			.photo-gallery {
+				margin: 3rem 0;
+			}
+
+			.gallery-title {
+				font-family: 'Dancing Script', cursive;
+				font-size: 2rem;
+				text-align: center;
+				color: var(--accent);
+				margin-bottom: 1.5rem;
+			}
+
+			.gallery-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1rem;
+				max-width: 700px;
+				margin: 0 auto;
+			}
+
+			.gallery-item {
+				position: relative;
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 4px 15px rgba(90, 70, 55, 0.15);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.gallery-item:nth-child(1) {
+				transform: rotate(-2deg);
+			}
+
+			.gallery-item:nth-child(2) {
+				transform: rotate(1.5deg);
+			}
+
+			.gallery-item:nth-child(3) {
+				transform: rotate(1deg);
+			}
+
+			.gallery-item:nth-child(4) {
+				transform: rotate(-1.5deg);
+			}
+
+			.gallery-item:hover {
+				transform: rotate(0deg) scale(1.03);
+				box-shadow: 0 8px 25px rgba(90, 70, 55, 0.25);
+				z-index: 10;
+			}
+
+			.gallery-item img {
+				width: 100%;
+				height: 250px;
+				object-fit: cover;
+				display: block;
+			}
+
+			.gallery-item::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				border: 3px solid white;
+				border-radius: 8px;
+				pointer-events: none;
+			}
+
+			@media (max-width: 720px) {
+				.gallery-grid {
+					grid-template-columns: 1fr;
+					gap: 1.5rem;
+				}
+
+				.gallery-item img {
+					height: 200px;
+				}
+
+				.gallery-item {
+					transform: rotate(0deg) !important;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -88,35 +175,46 @@ import { SITE_TITLE } from '../consts';
 			<div class="divider">✦</div>
 
 			<div class="content">
+				<h2>Les recettes de mamie Lorraine</h2>
 				<p>
-					Ces recettes ont été transmises de génération en génération dans notre famille.
-					Elles proviennent des fiches manuscrites de grand-mère Lorraine, soigneusement
-					conservées dans une boîte en bois dans sa cuisine, et maintenant numérisées
-					pour les préserver à jamais.
+					Mamie Lorraine cuisine pour notre famille depuis des décennies. Ses fameuses
+					fiches manuscrites — toujours rangées dans sa boîte en bois — sont maintenant en
+					ligne pour que tout le monde puisse y accéder facilement.
 				</p>
+
+				<section class="photo-gallery">
+					<p class="gallery-title">Souvenirs de famille</p>
+					<div class="gallery-grid">
+						<div class="gallery-item">
+							<Image src={photo1} alt="Souvenir de famille" width={400} height={300} />
+						</div>
+						<div class="gallery-item">
+							<Image src={photo2} alt="Souvenir de famille" width={400} height={300} />
+						</div>
+						<div class="gallery-item">
+							<Image src={photo3} alt="Souvenir de famille" width={400} height={300} style="object-position: center 20%;" />
+						</div>
+						<div class="gallery-item">
+							<Image src={photo4} alt="Souvenir de famille" width={400} height={300} />
+						</div>
+					</div>
+				</section>
 
 				<div class="quote">
-					<p>« La cuisine, c'est l'amour rendu visible. »</p>
+					<p>« Joshua, c'est mon petit-enfant préféré. »</p>
 				</div>
 
+				<h2>À propos de ce site</h2>
 				<p>
-					Cette collection de soixante-trois recettes représente des décennies de cuisine
-					familiale québécoise. Des plats réconfortants du dimanche aux desserts des fêtes,
-					chaque recette raconte une histoire et porte en elle les saveurs de notre enfance.
+					Ces recettes rassemblent les classiques de la cuisine
+					familiale québécoise : les plats réconfortants du dimanche, les desserts des fêtes,
+					et tout ce qu'on lui demande de refaire année après année.
 				</p>
 
 				<p>
-					Ce site a été créé pour partager ces trésors culinaires avec toute la famille,
-					peu importe où elle se trouve dans le monde. Que vous soyez un cuisinier
-					expérimenté ou que vous fassiez vos premiers pas en cuisine, nous espérons que
-					ces recettes vous apporteront autant de joie qu'elles nous en ont apporté
-					au fil des années.
-				</p>
-
-				<p>
-					Chaque fois que nous préparons l'un de ces plats, c'est un peu de grand-mère
-					qui revit dans notre cuisine. Les arômes, les gestes, les saveurs — tout nous
-					ramène à ces moments précieux passés à ses côtés.
+					Ce site existe pour que la famille puisse retrouver ses recettes peu importe où
+					l'on se trouve. Plus besoin de lui téléphoner pour demander « c'était combien de
+					tasses de farine, déjà? »
 				</p>
 
 				<p class="signature">
