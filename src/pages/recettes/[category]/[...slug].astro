@@ -5,13 +5,12 @@ import RecipePost from '../../../layouts/RecipePost.astro';
 const categoryInfo: Record<string, { name: string }> = {
 	'plats-principaux': { name: 'Plats principaux' },
 	'desserts': { name: 'Desserts' },
-	'sauces-et-marinades': { name: 'Sauces et marinades' },
-	'accompagnements': { name: 'Accompagnements' },
+	'sauces-et-accompagnements': { name: 'Les extras' },
 	'soupes': { name: 'Soupes' }
 };
 
 export async function getStaticPaths() {
-	const categories = ['plats-principaux', 'desserts', 'sauces-et-marinades', 'accompagnements', 'soupes'];
+	const categories = ['plats-principaux', 'desserts', 'sauces-et-accompagnements', 'soupes'];
 	const paths = [];
 
 	for (const category of categories) {

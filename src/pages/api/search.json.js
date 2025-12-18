@@ -2,10 +2,9 @@ import { getCollection } from 'astro:content';
 
 export async function GET() {
 	const categories = [
-		{ id: 'plats-principaux', name: 'Plats Principaux' },
+		{ id: 'plats-principaux', name: 'Plats principaux' },
 		{ id: 'desserts', name: 'Desserts' },
-		{ id: 'sauces-et-marinades', name: 'Sauces et Marinades' },
-		{ id: 'accompagnements', name: 'Accompagnements' },
+		{ id: 'sauces-et-accompagnements', name: 'Les extras' },
 		{ id: 'soupes', name: 'Soupes' }
 	];
 

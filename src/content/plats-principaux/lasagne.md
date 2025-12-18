@@ -1,6 +1,6 @@
 ---
-title: "Lasagne"
-titleEnglish: "Lasagna"
+title: "Lasagne - Nancy Bernard"
+titleEnglish: "Lasagna - Nancy Bernard"
 description: "Lasagne classique au boeuf et porc avec trois fromages"
 pubDate: 2025-12-16
 prepTime: "10 min"
@@ -15,7 +15,7 @@ cookTime: "40 min"
 - ¾ tasse parmesan râpé
 - 6 oz fromage mozzarella râpé
 - ½ lb nouilles lasagne (9 pâtes)
-- 1 recette de base aux tomates
+- 1 [recette de base aux tomates](/recettes/sauces-et-accompagnements/sauce-tomate-lasagne/)
 - ¼ c. à thé romarin
 
 ## Préparation
