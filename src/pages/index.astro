@@ -251,6 +251,16 @@ const categories = [
 				height: 130px;
 			}
 
+			.collage-item.size-wide {
+				width: 300px;
+				height: 180px;
+			}
+
+			.collage-item.size-wide img {
+				width: 300px;
+				height: 180px;
+			}
+
 			/* Slight rotations for puzzle effect */
 			.collage-row.row-1 .collage-item:nth-child(1) { transform: rotate(-3deg); }
 			.collage-row.row-1 .collage-item:nth-child(2) { transform: rotate(2deg); }
@@ -412,6 +422,14 @@ const categories = [
 					width: 50px;
 					height: 50px;
 				}
+				.collage-item.size-wide {
+					width: 120px;
+					height: 70px;
+				}
+				.collage-item.size-wide img {
+					width: 120px;
+					height: 70px;
+				}
 				.collage-row.row-2,
 				.collage-row.row-3 {
 					margin-top: -0.5rem;
@@ -467,7 +485,7 @@ const categories = [
 						<div class="collage-item size-sm"><Image src={client3} alt="Famille" width={150} height={150} /></div>
 						<div class="collage-item size-lg"><Image src={client11} alt="Famille" width={280} height={280} /></div>
 						<div class="collage-item size-md"><Image src={client12} alt="Famille" width={200} height={200} /></div>
-						<div class="collage-item size-lg"><Image src={client13} alt="Famille" width={280} height={280} /></div>
+						<div class="collage-item size-wide"><Image src={client13} alt="Famille" width={350} height={200} /></div>
 						<div class="collage-item size-md"><Image src={client14} alt="Famille" width={200} height={200} /></div>
 					</div>
 				</div>
