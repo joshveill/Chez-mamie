@@ -98,8 +98,8 @@ const categories = [
 
 			.hero-portrait {
 				margin-top: 1rem;
-				width: 200px;
-				height: 200px;
+				width: 170px;
+				height: 170px;
 				border-radius: 50%;
 				overflow: hidden;
 				border: 3px solid var(--accent);
@@ -145,8 +145,8 @@ const categories = [
 
 			.intro {
 				text-align: center;
-				max-width: 550px;
-				margin: 0 auto 3rem;
+				max-width: 850px;
+				margin: 2rem auto 4rem;
 				color: var(--text-muted);
 				font-style: italic;
 				line-height: 1.8;
@@ -426,7 +426,7 @@ const categories = [
 		<Header />
 		<main>
 			<section class="hero">
-				<h1>Les Recettes de Lorraine</h1>
+				<h1>La cuisine de Lorraine</h1>
 				<p class="hero-subtitle">Une collection de recettes familiales</p>
 				<div class="hero-portrait">
 					<Image src={mamieHero} alt="Mamie" width={300} height={275} />
@@ -442,8 +442,9 @@ const categories = [
 			</div>
 
 			<p class="intro">
-				{totalRecipes} recettes transcrites avec soin des fiches manuscrites de mamie Lorraine,
-				préservées pour les générations futures.
+				Une collection de {totalRecipes} recettes fidèlement transcrites des fiches manuscrites de mamie Lorraine,
+				pour en assurer la préservation à travers les générations. Certaines recettes s'inspirent également
+				de sources aujourd'hui inconnues, témoignant des influences culinaires variées qui ont nourri son savoir-faire.
 			</p>
 
 			<section class="famille">
