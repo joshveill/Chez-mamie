@@ -119,9 +119,12 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 				box-shadow: 0 8px 30px rgba(90, 70, 55, 0.3);
 				pointer-events: none;
 				opacity: 0;
-				filter: blur(10px);
-				will-change: transform;
-				transition: top 0.15s ease-out, opacity 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+				filter: blur(12px);
+				will-change: transform, opacity, filter;
+				transition: top 0.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+							opacity 0.5s ease-out,
+							filter 0.5s ease-out,
+							box-shadow 0.3s ease;
 			}
 
 			.gallery-item:nth-child(1) {
@@ -291,6 +294,8 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 				{ speed: 1.2, scrollDelay: 1500 }
 			];
 
+			let ticking = false;
+
 			function updatePositions() {
 				const scrollY = window.scrollY;
 				const viewportHeight = window.innerHeight;
@@ -314,20 +319,20 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 						// Below viewport - invisible
 						opacity = 0;
 						blur = 12;
-					} else if (top > viewportHeight * 0.75) {
+					} else if (top > viewportHeight * 0.7) {
 						// Entering from bottom - fade in, unblur
-						const progress = (viewportHeight + 50 - top) / (viewportHeight * 0.25 + 50);
-						opacity = progress;
-						blur = 12 - (progress * 12);
+						const progress = (viewportHeight + 50 - top) / (viewportHeight * 0.3 + 50);
+						opacity = Math.min(1, progress);
+						blur = Math.max(0, 12 - (progress * 12));
 					} else if (top < headerHeight) {
 						// Exiting at top - fade out, blur
 						opacity = 0;
 						blur = 12;
-					} else if (top < headerHeight + 120) {
+					} else if (top < headerHeight + 150) {
 						// Near top - fading out
-						const progress = (top - headerHeight) / 120;
-						opacity = progress;
-						blur = 12 - (progress * 12);
+						const progress = (top - headerHeight) / 150;
+						opacity = Math.min(1, progress);
+						blur = Math.max(0, 12 - (progress * 12));
 					} else {
 						// Middle - fully visible
 						opacity = 1;
@@ -337,9 +342,18 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 					item.style.opacity = opacity;
 					item.style.filter = `blur(${blur}px)`;
 				});
+
+				ticking = false;
 			}
 
-			window.addEventListener('scroll', updatePositions, { passive: true });
+			function onScroll() {
+				if (!ticking) {
+					requestAnimationFrame(updatePositions);
+					ticking = true;
+				}
+			}
+
+			window.addEventListener('scroll', onScroll, { passive: true });
 			window.addEventListener('resize', updatePositions);
 
 			// Initial position
