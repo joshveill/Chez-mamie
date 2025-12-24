@@ -187,23 +187,19 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 
 			@media (max-width: 720px) {
 				.gallery-item {
-					width: 180px !important;
+					width: 160px !important;
 				}
 
-				.gallery-item:nth-child(1),
-				.gallery-item:nth-child(3),
-				.gallery-item:nth-child(4) {
-					left: 5% !important;
+				.gallery-item:nth-child(odd) {
+					left: 3% !important;
 					right: auto !important;
+					transform: rotate(-2deg) !important;
 				}
 
-				.gallery-item:nth-child(2),
-				.gallery-item:nth-child(5),
-				.gallery-item:nth-child(6),
-				.gallery-item:nth-child(7) {
-					right: 5% !important;
+				.gallery-item:nth-child(even) {
+					right: 3% !important;
 					left: auto !important;
-					transform: rotate(-2deg) !important;
+					transform: rotate(2deg) !important;
 				}
 
 				.photo-request {
