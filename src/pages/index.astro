@@ -7,6 +7,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import mamieHero from '../assets/mamie-hero.jpg';
+import maisonBg from '../assets/maison.png';
 
 // Count all recipes
 const allRecipes = [
@@ -387,6 +388,19 @@ const categories = [
 				background: var(--border);
 			}
 
+			.maison-image {
+				text-align: center;
+				margin: 3rem auto 2rem;
+				max-width: 600px;
+			}
+
+			.maison-image img {
+				width: 100%;
+				height: auto;
+				border-radius: 12px;
+				box-shadow: 0 4px 20px rgba(90, 70, 55, 0.15);
+			}
+
 			@media (max-width: 720px) {
 				.hero h1 {
 					font-size: 2.2rem;
@@ -522,6 +536,10 @@ const categories = [
 				<div class="flourish-line">
 					<span>❧</span>
 				</div>
+			</div>
+
+			<div class="maison-image">
+				<Image src={maisonBg} alt="La maison de Mamie" width={800} height={400} />
 			</div>
 		</main>
 		<Footer />
