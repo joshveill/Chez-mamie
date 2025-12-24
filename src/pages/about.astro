@@ -120,8 +120,8 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 				pointer-events: none;
 				opacity: 0;
 				filter: blur(10px);
-				will-change: top, opacity, filter;
-				transition: box-shadow 0.3s ease;
+				will-change: transform;
+				transition: top 0.15s ease-out, opacity 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 			}
 
 			.gallery-item:nth-child(1) {
@@ -282,13 +282,13 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 
 			// Different speeds and delay before appearing (in scroll pixels)
 			const config = [
-				{ speed: 1.2, scrollDelay: 50 },
-				{ speed: 1.2, scrollDelay: 200 },
-				{ speed: 1.2, scrollDelay: 350 },
+				{ speed: 1.2, scrollDelay: 300 },
 				{ speed: 1.2, scrollDelay: 500 },
-				{ speed: 1.2, scrollDelay: 650 },
-				{ speed: 1.2, scrollDelay: 800 },
-				{ speed: 1.2, scrollDelay: 950 }
+				{ speed: 1.2, scrollDelay: 700 },
+				{ speed: 1.2, scrollDelay: 900 },
+				{ speed: 1.2, scrollDelay: 1100 },
+				{ speed: 1.2, scrollDelay: 1300 },
+				{ speed: 1.2, scrollDelay: 1500 }
 			];
 
 			function updatePositions() {
