@@ -3,7 +3,7 @@ import rss from '@astrojs/rss';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 export async function GET(context) {
-	const categories = ['plats-principaux', 'desserts', 'sauces-et-marinades', 'accompagnements', 'soupes'];
+	const categories = ['plats-principaux', 'desserts', 'sauces-et-accompagnements', 'soupes'];
 	const allRecipes = [];
 
 	for (const category of categories) {
