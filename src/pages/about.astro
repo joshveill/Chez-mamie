@@ -273,17 +273,25 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 		<Footer />
 		<script>
 			const galleryItems = document.querySelectorAll('.gallery-item');
+			const isMobile = window.innerWidth <= 720;
 
-			// Config with rotation values matching CSS
+			// Config with rotation values - on mobile, no translateX for centering
 			const config = [
 				{ speed: 1.2, scrollDelay: 300, rotate: -3, translateX: 0 },
-				{ speed: 1.2, scrollDelay: 500, rotate: 2.5, translateX: -50 },
+				{ speed: 1.2, scrollDelay: 500, rotate: 2.5, translateX: isMobile ? 0 : -50 },
 				{ speed: 1.2, scrollDelay: 700, rotate: 4, translateX: 0 },
 				{ speed: 1.2, scrollDelay: 900, rotate: -2.5, translateX: 0 },
-				{ speed: 1.2, scrollDelay: 1100, rotate: 3.5, translateX: -50 },
+				{ speed: 1.2, scrollDelay: 1100, rotate: 3.5, translateX: isMobile ? 0 : -50 },
 				{ speed: 1.2, scrollDelay: 1300, rotate: -4, translateX: 0 },
-				{ speed: 1.2, scrollDelay: 1500, rotate: 2, translateX: -50 }
+				{ speed: 1.2, scrollDelay: 1500, rotate: 2, translateX: isMobile ? 0 : -50 }
 			];
+
+			// On mobile, alternate rotations
+			if (isMobile) {
+				config.forEach((c, i) => {
+					c.rotate = i % 2 === 0 ? -2 : 2;
+				});
+			}
 
 			function updatePositions() {
 				const scrollY = window.scrollY;
