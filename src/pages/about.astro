@@ -186,8 +186,28 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 			}
 
 			@media (max-width: 720px) {
-				.floating-gallery {
-					display: none;
+				.gallery-item {
+					width: 180px !important;
+				}
+
+				.gallery-item:nth-child(1),
+				.gallery-item:nth-child(3),
+				.gallery-item:nth-child(4) {
+					left: 5% !important;
+					right: auto !important;
+				}
+
+				.gallery-item:nth-child(2),
+				.gallery-item:nth-child(5),
+				.gallery-item:nth-child(6),
+				.gallery-item:nth-child(7) {
+					right: 5% !important;
+					left: auto !important;
+					transform: rotate(-2deg) !important;
+				}
+
+				.photo-request {
+					margin-top: 800px;
 				}
 			}
 		</style>
