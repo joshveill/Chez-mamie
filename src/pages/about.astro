@@ -9,6 +9,9 @@ import photo1 from '../assets/À propos/IMG_0362.jpeg';
 import photo2 from '../assets/À propos/IMG_0509.jpeg';
 import photo3 from '../assets/À propos/IMG_5491.jpg';
 import photo4 from '../assets/À propos/IMG_5498.jpg';
+import photo5 from '../assets/À propos/Noel 2009 419.jpeg';
+import photo6 from '../assets/À propos/Noel 2009 430.jpeg';
+import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 ---
 
 <!doctype html>
@@ -80,62 +83,81 @@ import photo4 from '../assets/À propos/IMG_5498.jpg';
 			.end-flourish {
 				text-align: center;
 				margin-top: 2rem;
+				padding-bottom: 1500px;
 				color: var(--accent);
 			}
 
-			.photo-gallery {
-				margin: 3rem 0;
-			}
-
-			.gallery-title {
-				font-family: 'Dancing Script', cursive;
-				font-size: 2rem;
-				text-align: center;
-				color: var(--accent);
-				margin-bottom: 1.5rem;
-			}
-
-			.gallery-grid {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				gap: 1.5rem;
-				max-width: 800px;
-				margin: 0 auto;
+			.floating-gallery {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				z-index: 50;
+				overflow: hidden;
 			}
 
 			.gallery-item {
-				position: relative;
-				border-radius: 8px;
+				position: absolute;
+				border-radius: 10px;
 				overflow: hidden;
-				box-shadow: 0 4px 15px rgba(90, 70, 55, 0.15);
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				box-shadow: 0 8px 30px rgba(90, 70, 55, 0.3);
+				pointer-events: none;
+				opacity: 0;
+				filter: blur(10px);
+				will-change: top, opacity, filter;
+				transition: box-shadow 0.3s ease;
 			}
 
 			.gallery-item:nth-child(1) {
-				transform: rotate(-2deg);
+				left: 5%;
+				width: 280px;
+				transform: rotate(-3deg);
 			}
 
 			.gallery-item:nth-child(2) {
-				transform: rotate(1.5deg);
+				left: 50%;
+				transform: translateX(-50%) rotate(2.5deg);
+				width: 290px;
 			}
 
 			.gallery-item:nth-child(3) {
-				transform: rotate(1deg);
+				right: 5%;
+				left: auto;
+				width: 270px;
+				transform: rotate(4deg);
 			}
 
 			.gallery-item:nth-child(4) {
-				transform: rotate(-1.5deg);
+				left: 8%;
+				width: 280px;
+				transform: rotate(-2.5deg);
 			}
 
-			.gallery-item:hover {
-				transform: rotate(0deg) scale(1.03);
-				box-shadow: 0 8px 25px rgba(90, 70, 55, 0.25);
-				z-index: 10;
+			.gallery-item:nth-child(5) {
+				left: 50%;
+				transform: translateX(-50%) rotate(3.5deg);
+				width: 275px;
+			}
+
+			.gallery-item:nth-child(6) {
+				right: 8%;
+				left: auto;
+				width: 285px;
+				transform: rotate(-4deg);
+			}
+
+			.gallery-item:nth-child(7) {
+				left: 50%;
+				transform: translateX(-50%) rotate(2deg);
+				width: 265px;
 			}
 
 			.gallery-item img {
 				width: 100%;
-				height: 250px;
+				height: auto;
+				aspect-ratio: 4/3;
 				object-fit: cover;
 				display: block;
 			}
@@ -144,23 +166,14 @@ import photo4 from '../assets/À propos/IMG_5498.jpg';
 				content: '';
 				position: absolute;
 				inset: 0;
-				border: 3px solid white;
-				border-radius: 8px;
+				border: 5px solid white;
+				border-radius: 10px;
 				pointer-events: none;
 			}
 
 			@media (max-width: 720px) {
-				.gallery-grid {
-					grid-template-columns: 1fr;
-					gap: 1.5rem;
-				}
-
-				.gallery-item img {
-					height: 200px;
-				}
-
-				.gallery-item {
-					transform: rotate(0deg) !important;
+				.floating-gallery {
+					display: none;
 				}
 			}
 		</style>
@@ -180,24 +193,6 @@ import photo4 from '../assets/À propos/IMG_5498.jpg';
 					fiches manuscrites — toujours rangées dans une boîte, un tiroir ou découpées d'un
 					magazine — sont maintenant en ligne pour que tout le monde puisse y accéder facilement.
 				</p>
-
-				<section class="photo-gallery">
-					<p class="gallery-title">Souvenirs de famille</p>
-					<div class="gallery-grid">
-						<div class="gallery-item">
-							<Image src={photo1} alt="Souvenir de famille" width={400} height={300} />
-						</div>
-						<div class="gallery-item">
-							<Image src={photo2} alt="Souvenir de famille" width={400} height={300} />
-						</div>
-						<div class="gallery-item">
-							<Image src={photo4} alt="Souvenir de famille" width={400} height={300} />
-						</div>
-						<div class="gallery-item">
-							<Image src={photo3} alt="Souvenir de famille" width={400} height={300} style="object-position: center 20%;" />
-						</div>
-					</div>
-				</section>
 
 				<div class="quote">
 					<p>« Joshua, c'est mon petit-enfant préféré. »</p>
@@ -223,6 +218,99 @@ import photo4 from '../assets/À propos/IMG_5498.jpg';
 				<div class="end-flourish">❧</div>
 			</div>
 		</main>
+
+		<div class="floating-gallery">
+			<div class="gallery-item">
+				<Image src={photo1} alt="Souvenir de famille" width={400} height={300} />
+			</div>
+			<div class="gallery-item">
+				<Image src={photo2} alt="Souvenir de famille" width={400} height={300} />
+			</div>
+			<div class="gallery-item">
+				<Image src={photo4} alt="Souvenir de famille" width={400} height={300} />
+			</div>
+			<div class="gallery-item">
+				<Image src={photo3} alt="Souvenir de famille" width={400} height={300} style="object-position: center 20%;" />
+			</div>
+			<div class="gallery-item">
+				<Image src={photo5} alt="Souvenir de famille" width={400} height={300} />
+			</div>
+			<div class="gallery-item">
+				<Image src={photo6} alt="Souvenir de famille" width={400} height={300} />
+			</div>
+			<div class="gallery-item">
+				<Image src={photo7} alt="Souvenir de famille" width={400} height={300} />
+			</div>
+		</div>
+
 		<Footer />
+		<script>
+			const galleryItems = document.querySelectorAll('.gallery-item');
+
+			// Different speeds and delay before appearing (in scroll pixels)
+			const config = [
+				{ speed: 1.2, scrollDelay: 50 },
+				{ speed: 1.2, scrollDelay: 200 },
+				{ speed: 1.2, scrollDelay: 350 },
+				{ speed: 1.2, scrollDelay: 500 },
+				{ speed: 1.2, scrollDelay: 650 },
+				{ speed: 1.2, scrollDelay: 800 },
+				{ speed: 1.2, scrollDelay: 950 }
+			];
+
+			function updatePositions() {
+				const scrollY = window.scrollY;
+				const viewportHeight = window.innerHeight;
+				const headerHeight = 80;
+
+				galleryItems.forEach((item, index) => {
+					const { speed, scrollDelay } = config[index];
+
+					// Effective scroll for this image (starts moving after delay)
+					const effectiveScroll = Math.max(0, scrollY - scrollDelay);
+
+					// Start below viewport, move up as user scrolls
+					const top = viewportHeight + 400 - (effectiveScroll * speed);
+					item.style.top = `${top}px`;
+
+					// Calculate blur and opacity based on position
+					let opacity = 0;
+					let blur = 12;
+
+					if (top > viewportHeight + 50) {
+						// Below viewport - invisible
+						opacity = 0;
+						blur = 12;
+					} else if (top > viewportHeight * 0.75) {
+						// Entering from bottom - fade in, unblur
+						const progress = (viewportHeight + 50 - top) / (viewportHeight * 0.25 + 50);
+						opacity = progress;
+						blur = 12 - (progress * 12);
+					} else if (top < headerHeight) {
+						// Exiting at top - fade out, blur
+						opacity = 0;
+						blur = 12;
+					} else if (top < headerHeight + 120) {
+						// Near top - fading out
+						const progress = (top - headerHeight) / 120;
+						opacity = progress;
+						blur = 12 - (progress * 12);
+					} else {
+						// Middle - fully visible
+						opacity = 1;
+						blur = 0;
+					}
+
+					item.style.opacity = opacity;
+					item.style.filter = `blur(${blur}px)`;
+				});
+			}
+
+			window.addEventListener('scroll', updatePositions, { passive: true });
+			window.addEventListener('resize', updatePositions);
+
+			// Initial position
+			updatePositions();
+		</script>
 	</body>
 </html>
