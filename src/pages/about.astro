@@ -114,6 +114,7 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 
 			.gallery-item {
 				position: absolute;
+				top: 0;
 				border-radius: 10px;
 				overflow: hidden;
 				box-shadow: 0 8px 30px rgba(90, 70, 55, 0.3);
@@ -121,21 +122,18 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 				opacity: 0;
 				filter: blur(12px);
 				will-change: transform, opacity, filter;
-				transition: top 0.2s cubic-bezier(0.25, 0.1, 0.25, 1),
-							opacity 0.5s ease-out,
-							filter 0.5s ease-out,
-							box-shadow 0.3s ease;
+				transition: transform 0.08s linear,
+							opacity 0.4s ease-out,
+							filter 0.4s ease-out;
 			}
 
 			.gallery-item:nth-child(1) {
 				left: 5%;
 				width: 340px;
-				transform: rotate(-3deg);
 			}
 
 			.gallery-item:nth-child(2) {
 				left: 50%;
-				transform: translateX(-50%) rotate(2.5deg);
 				width: 350px;
 			}
 
@@ -143,18 +141,15 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 				right: 5%;
 				left: auto;
 				width: 330px;
-				transform: rotate(4deg);
 			}
 
 			.gallery-item:nth-child(4) {
 				left: 8%;
 				width: 340px;
-				transform: rotate(-2.5deg);
 			}
 
 			.gallery-item:nth-child(5) {
 				left: 50%;
-				transform: translateX(-50%) rotate(3.5deg);
 				width: 335px;
 			}
 
@@ -162,12 +157,10 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 				right: 8%;
 				left: auto;
 				width: 345px;
-				transform: rotate(-4deg);
 			}
 
 			.gallery-item:nth-child(7) {
 				left: 50%;
-				transform: translateX(-50%) rotate(2deg);
 				width: 325px;
 			}
 
@@ -196,13 +189,11 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 				.gallery-item:nth-child(odd) {
 					left: 3% !important;
 					right: auto !important;
-					transform: rotate(-2deg) !important;
 				}
 
 				.gallery-item:nth-child(even) {
 					right: 3% !important;
 					left: auto !important;
-					transform: rotate(2deg) !important;
 				}
 
 				.photo-request {
@@ -283,18 +274,16 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 		<script>
 			const galleryItems = document.querySelectorAll('.gallery-item');
 
-			// Different speeds and delay before appearing (in scroll pixels)
+			// Config with rotation values matching CSS
 			const config = [
-				{ speed: 1.2, scrollDelay: 300 },
-				{ speed: 1.2, scrollDelay: 500 },
-				{ speed: 1.2, scrollDelay: 700 },
-				{ speed: 1.2, scrollDelay: 900 },
-				{ speed: 1.2, scrollDelay: 1100 },
-				{ speed: 1.2, scrollDelay: 1300 },
-				{ speed: 1.2, scrollDelay: 1500 }
+				{ speed: 1.2, scrollDelay: 300, rotate: -3, translateX: 0 },
+				{ speed: 1.2, scrollDelay: 500, rotate: 2.5, translateX: -50 },
+				{ speed: 1.2, scrollDelay: 700, rotate: 4, translateX: 0 },
+				{ speed: 1.2, scrollDelay: 900, rotate: -2.5, translateX: 0 },
+				{ speed: 1.2, scrollDelay: 1100, rotate: 3.5, translateX: -50 },
+				{ speed: 1.2, scrollDelay: 1300, rotate: -4, translateX: 0 },
+				{ speed: 1.2, scrollDelay: 1500, rotate: 2, translateX: -50 }
 			];
-
-			let ticking = false;
 
 			function updatePositions() {
 				const scrollY = window.scrollY;
@@ -302,35 +291,41 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 				const headerHeight = 80;
 
 				galleryItems.forEach((item, index) => {
-					const { speed, scrollDelay } = config[index];
+					const { speed, scrollDelay, rotate, translateX } = config[index];
 
 					// Effective scroll for this image (starts moving after delay)
 					const effectiveScroll = Math.max(0, scrollY - scrollDelay);
 
 					// Start below viewport, move up as user scrolls
-					const top = viewportHeight + 400 - (effectiveScroll * speed);
-					item.style.top = `${top}px`;
+					const translateY = viewportHeight + 400 - (effectiveScroll * speed);
+
+					// Apply transform with translateY and rotation combined
+					if (translateX !== 0) {
+						item.style.transform = `translateX(${translateX}%) translateY(${translateY}px) rotate(${rotate}deg)`;
+					} else {
+						item.style.transform = `translateY(${translateY}px) rotate(${rotate}deg)`;
+					}
 
 					// Calculate blur and opacity based on position
 					let opacity = 0;
 					let blur = 12;
 
-					if (top > viewportHeight + 50) {
+					if (translateY > viewportHeight + 50) {
 						// Below viewport - invisible
 						opacity = 0;
 						blur = 12;
-					} else if (top > viewportHeight * 0.7) {
+					} else if (translateY > viewportHeight * 0.7) {
 						// Entering from bottom - fade in, unblur
-						const progress = (viewportHeight + 50 - top) / (viewportHeight * 0.3 + 50);
+						const progress = (viewportHeight + 50 - translateY) / (viewportHeight * 0.3 + 50);
 						opacity = Math.min(1, progress);
 						blur = Math.max(0, 12 - (progress * 12));
-					} else if (top < headerHeight) {
+					} else if (translateY < headerHeight) {
 						// Exiting at top - fade out, blur
 						opacity = 0;
 						blur = 12;
-					} else if (top < headerHeight + 150) {
+					} else if (translateY < headerHeight + 150) {
 						// Near top - fading out
-						const progress = (top - headerHeight) / 150;
+						const progress = (translateY - headerHeight) / 150;
 						opacity = Math.min(1, progress);
 						blur = Math.max(0, 12 - (progress * 12));
 					} else {
@@ -342,22 +337,24 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 					item.style.opacity = opacity;
 					item.style.filter = `blur(${blur}px)`;
 				});
-
-				ticking = false;
 			}
 
-			function onScroll() {
-				if (!ticking) {
-					requestAnimationFrame(updatePositions);
-					ticking = true;
+			// Use passive scroll with direct RAF calls for smoothest animation
+			let lastScrollY = window.scrollY;
+			let rafId = null;
+
+			function smoothScroll() {
+				if (lastScrollY !== window.scrollY) {
+					lastScrollY = window.scrollY;
+					updatePositions();
 				}
+				rafId = requestAnimationFrame(smoothScroll);
 			}
 
-			window.addEventListener('scroll', onScroll, { passive: true });
-			window.addEventListener('resize', updatePositions);
+			// Start animation loop
+			smoothScroll();
 
-			// Initial position
-			updatePositions();
+			window.addEventListener('resize', updatePositions);
 		</script>
 	</body>
 </html>
