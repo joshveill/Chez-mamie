@@ -55,11 +55,18 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 				text-align-last: left;
 			}
 
+			.quote-intro {
+				text-align: center;
+				font-style: italic;
+				color: var(--text-muted);
+				margin-bottom: 0.5rem;
+			}
+
 			.quote {
 				font-style: italic;
 				text-align: center;
 				color: var(--text-muted);
-				margin: 2.5rem 0;
+				margin: 0 0 2.5rem 0;
 				padding: 1.5rem 2rem;
 				border-left: 3px solid var(--accent);
 				background: var(--background-alt);
@@ -83,8 +90,15 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 			.end-flourish {
 				text-align: center;
 				margin-top: 2rem;
-				padding-bottom: 1500px;
 				color: var(--accent);
+			}
+
+			.photo-request {
+				text-align: center;
+				font-style: italic;
+				color: var(--text-muted);
+				margin-top: 1200px;
+				padding-bottom: 300px;
 			}
 
 			.floating-gallery {
@@ -112,46 +126,46 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 
 			.gallery-item:nth-child(1) {
 				left: 5%;
-				width: 280px;
+				width: 340px;
 				transform: rotate(-3deg);
 			}
 
 			.gallery-item:nth-child(2) {
 				left: 50%;
 				transform: translateX(-50%) rotate(2.5deg);
-				width: 290px;
+				width: 350px;
 			}
 
 			.gallery-item:nth-child(3) {
 				right: 5%;
 				left: auto;
-				width: 270px;
+				width: 330px;
 				transform: rotate(4deg);
 			}
 
 			.gallery-item:nth-child(4) {
 				left: 8%;
-				width: 280px;
+				width: 340px;
 				transform: rotate(-2.5deg);
 			}
 
 			.gallery-item:nth-child(5) {
 				left: 50%;
 				transform: translateX(-50%) rotate(3.5deg);
-				width: 275px;
+				width: 335px;
 			}
 
 			.gallery-item:nth-child(6) {
 				right: 8%;
 				left: auto;
-				width: 285px;
+				width: 345px;
 				transform: rotate(-4deg);
 			}
 
 			.gallery-item:nth-child(7) {
 				left: 50%;
 				transform: translateX(-50%) rotate(2deg);
-				width: 265px;
+				width: 325px;
 			}
 
 			.gallery-item img {
@@ -189,11 +203,12 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 
 			<div class="content">
 				<p>
-					Mamie Lorraine cuisine pour notre famille depuis des décennies. Ses fameuses
-					fiches manuscrites — toujours rangées dans une boîte, un tiroir ou découpées d'un
+					Que ce soit la dinde à Noël ou le jambon de Pâques, on en redemande toujours. Ses fameuses
+					recettes écrites à la main — toujours rangées dans une boîte, un tiroir ou découpées d'un
 					magazine — sont maintenant en ligne pour que tout le monde puisse y accéder facilement.
 				</p>
 
+				<p class="quote-intro">Comme elle dit toujours :</p>
 				<div class="quote">
 					<p>« Joshua, c'est mon petit-enfant préféré. »</p>
 				</div>
@@ -216,6 +231,8 @@ import photo7 from '../assets/À propos/Photo Nov. 2005- Fev.2006 018.jpeg';
 				</p>
 
 				<div class="end-flourish">❧</div>
+
+				<p class="photo-request">Envoyez-moi vos photos préférées — <a href="mailto:joshuaveilleux1@gmail.com">joshuaveilleux1@gmail.com</a></p>
 			</div>
 		</main>
 
